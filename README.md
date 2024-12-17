@@ -1,4 +1,4 @@
-# ACM UCR Website Template
+# CVDSA UofT Website
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -11,11 +11,11 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[CVDSA UofT Figma Design File](https://www.figma.com/design/ZwdZgOjM3jcuqfpi1Qqi4b/UofT-CVDSA-Website?node-id=0-1&t=m0fS2NDCG1RV7duS-1)
 
 ## Node.js
 
-ACM UCR Website Template runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
+CVDSA UofT runs on Node.js Version 20.10.0 and higher. Please ensure you have Node.js installed via the [official website](https://nodejs.org/en).
 
 ## Next.js
 
