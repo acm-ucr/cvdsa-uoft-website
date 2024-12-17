@@ -11,7 +11,7 @@
 
 ## Figma
 
-[ACM UCR Website Template Figma Design File](https://www.figma.com/)
+[CVDSA UofT Figma Design File](https://www.figma.com/design/ZwdZgOjM3jcuqfpi1Qqi4b/UofT-CVDSA-Website?node-id=0-1&t=m0fS2NDCG1RV7duS-1)
 
 ## Node.js
 
