@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       colors: {
         cvdsa: {
-          red: "#F33735",
           "red-100": "#F2918F",
-          orange: "#FF754A",
-          purple: "#BD99FF",
-          cornflower: "#B5CBFD",
+          "red-200": "#F33734",
+          "blue-100": "#B5CBFD",
+          "orange-100": "#FF754A",
+          "purple-100": "#BC99FF",
+          "cornflower-100": "#B5CBFD",
         },
       },
     },
