@@ -1,11 +1,9 @@
-import Example from "@/components/home/example";
-import JoinText from "@/components/home/JoinText";
+import Example from "@/components/home/example"
 
 const Home = () => {
   return (
     <div>
       <Example />
-      <JoinText />
     </div>
   );
 };
