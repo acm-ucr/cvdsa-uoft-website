@@ -1,4 +1,4 @@
-import Example from "@/components/home/example"
+import Example from "@/components/home/example";
 
 const Home = () => {
   return (
