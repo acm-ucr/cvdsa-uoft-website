@@ -1,9 +1,5 @@
 const JoinText = () => {
-  return (
-    <div className="ml-[10vw] w-fit font-seasons">
-      <p className="text-[4vw]">WHY JOIN?</p>
-    </div>
-  );
+  return <p className="ml-[10vw] font-seasons text-[4vw]">WHY JOIN?</p>;
 };
 
 export default JoinText;
