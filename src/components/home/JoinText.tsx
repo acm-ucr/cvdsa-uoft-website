@@ -1,7 +1,7 @@
 const JoinText = () => {
   return (
-    <div className="flex w-full justify-center">
-      <p className="w-[70%] text-[4vw]">WHY JOIN?</p>
+    <div className="w-fit ml-[10vw] font-seasons">
+      <p className="text-[4vw]">WHY JOIN?</p>
     </div>
   );
 };
