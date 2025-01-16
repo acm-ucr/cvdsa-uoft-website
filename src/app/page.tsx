@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default MainText;
+export default Home;
