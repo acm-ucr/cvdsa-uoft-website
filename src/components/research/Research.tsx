@@ -1,11 +1,11 @@
 import React from "react";
 
 const Research = () => {
-    return (
+  return (
     <div className="flex items-center justify-center font-seasons text-[3vw]">
-        <p>RESEARCH</p>
-      </div>
-    );
-  };
-  
-  export default Research;
+      <p>RESEARCH</p>
+    </div>
+  );
+};
+
+export default Research;
