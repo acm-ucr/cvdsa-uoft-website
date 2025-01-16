@@ -1,4 +1,4 @@
-import Research from "@/components/home/research";
+import Research from "@/components/research/Research";
 
 const Home = () => {
   return (
