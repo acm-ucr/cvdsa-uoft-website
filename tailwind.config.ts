@@ -11,6 +11,8 @@ module.exports = {
           "orange-100": "#FF754A",
           "purple-100": "#BC99FF",
           "cornflower-100": "#B5CBFD",
+          "white-255": "FFFFFF",
+          "black-255": "000000",
         },
       },
     },
