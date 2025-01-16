@@ -1,11 +1,11 @@
-import Example from "@/components/home/joinbutton";
+import MainText from "@/components/home/mainText";
 
 const Home = () => {
   return (
     <div>
-      <Example />
+      <MainText />
     </div>
   );
 };
 
-export default Home;
+export default MainText;
