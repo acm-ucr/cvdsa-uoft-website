@@ -15,6 +15,13 @@ module.exports = {
           "black-255": "000000",
         },
       },
+
+      fontFamily: {
+        'cvdsa-Montserrat-sans': [
+          'Montserrat', 
+          'sans-serif', 
+        ],
+      },
     },
   },
   plugins: [],
