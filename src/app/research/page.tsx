@@ -1,5 +1,11 @@
+import SecondaryText from "@/components/research/secondText";
 const Research = () => {
-  return <div>research comps here</div>;
+  return (
+    <div>
+      {" "}
+      <SecondaryText />{" "}
+    </div>
+  );
 };
 
 export default Research;
