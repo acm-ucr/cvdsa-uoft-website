@@ -3,7 +3,7 @@ const Research = () => {
   return (
     <div>
       {" "}
-      <SecondaryText />{" "}
+      <SecondaryText />
     </div>
   );
 };
