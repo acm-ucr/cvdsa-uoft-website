@@ -1,9 +1,11 @@
-import Example from "@/components/home/joinbutton";
+import MainText from "@/components/home/mainText";
+import Research from "@/components/research/Research";
 
 const Home = () => {
   return (
     <div>
-      <Example />
+      <MainText />
+      <Research />
     </div>
   );
 };
