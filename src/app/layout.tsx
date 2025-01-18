@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-import Navigation from "@/app/Navigation";
+import Navigation from "@/components/Navigation";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
 const montserrat = Montserrat({ subsets: ["latin"] });

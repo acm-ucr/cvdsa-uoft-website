@@ -4,11 +4,16 @@ import Link from "next/link";
 import React, { useState } from "react";
 import logo from "@/public/logo.webp";
 import { items } from "@/data/navigation";
+import { IoMdMenu } from "react-icons/io";
 
 const Navigation = () => {
   const [selected, setSelected] = useState("");
+  const [nav, setNav] = useState(false);
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
-    <div className="sticky top-0 z-30 ml-[3%] mr-[3%] flex items-center justify-between border-b-4 border-cvdsa-red-200 bg-white text-lg md:text-[1.7vw]">
+    <div className="sticky top-0 z-30 flex items-center justify-between border-b-4 border-cvdsa-red-200 bg-white text-lg md:text-[1.7vw]">
       <Link
         onClick={() => {
           setSelected("");
@@ -42,6 +47,35 @@ const Navigation = () => {
             {item.name}
           </Link>
         ))}
+      </div>
+
+      <div
+        className={
+          nav
+            ? "fixed left-0 right-0 top-7 -z-10 flex w-[100%] flex-col items-center justify-evenly bg-white transition duration-500 ease-in-out md:hidden"
+            : "fixed top-[-100%] hidden transition duration-500 ease-in-out"
+        }
+      >
+        {items.map((item, index) => (
+          <Link
+            href={item.link}
+            key={index}
+            onClick={() => {
+              setSelected(item.name);
+              handleNav();
+            }}
+            className={`border-solid py-2 duration-300 hover:opacity-60 md:py-0 ${
+              selected === item.name
+                ? "inline-block rounded-full border-b-2 bg-cvdsa-red-100 p-4 text-black"
+                : "text-black"
+            }`}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </div>
+      <div onClick={handleNav}>
+        <IoMdMenu className="justify-self-end text-3xl text-black hover:cursor-pointer hover:opacity-60 md:hidden" />
       </div>
     </div>
   );
