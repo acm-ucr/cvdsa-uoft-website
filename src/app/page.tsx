@@ -1,9 +1,9 @@
-import Example from "@/components/home/joinbutton";
+import Research from "@/components/research/Research";
 
 const Home = () => {
   return (
     <div>
-      <Example />
+      <Research />
     </div>
   );
 };
