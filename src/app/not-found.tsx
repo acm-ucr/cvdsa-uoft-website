@@ -1,4 +1,4 @@
-import HomeButton from "@/components/error/homeButton";
+import HomeButton from "@/components/error/NotFound";
 
 const NotFound = () => {
   return (
