@@ -5,7 +5,7 @@ const BlurbHome = () => {
     <div className="flex w-[30vw] flex-col items-center">
       <div>
         <Image
-          src="/home/blurbforhome.jpeg"
+          src="/home/blurbforhome.webp"
           width={310}
           height={500}
           alt="Picture for blurb"
