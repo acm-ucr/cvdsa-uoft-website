@@ -2,7 +2,7 @@ const ResearchImage = () => {
   return (
     <>
       <div>
-        <img src="/research/rectangle8.png" />
+        <img src="/research/rectangle8.webp" />
       </div>
     </>
   );
