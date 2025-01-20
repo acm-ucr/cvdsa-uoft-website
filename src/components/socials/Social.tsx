@@ -2,7 +2,7 @@ import React from "react";
 
 const Social = () => {
   return (
-    <div className="relative top-[101px] flex h-[236px] w-full overflow-hidden">
+    <div className="relative flex h-[236px] w-full overflow-hidden">
       <img
         src="/social/socialsimage.png"
         alt="Socials Banner"
