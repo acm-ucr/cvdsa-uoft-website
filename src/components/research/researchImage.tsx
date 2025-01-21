@@ -6,7 +6,7 @@ const ResearchImage = () => {
       <div>
         <Image
           src={ResearchConference}
-          className="aspect-[5/1] w-screen"
+          className="w-screen"
           alt={"Research Conference"}
         />
       </div>
