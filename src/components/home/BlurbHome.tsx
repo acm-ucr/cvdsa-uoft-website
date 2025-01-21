@@ -1,15 +1,14 @@
 import Image from "next/image";
+import Cupcakes from "@/public/home/cupcakes.jpeg";
 
 const BlurbHome = () => {
   return (
     <div className="flex w-[30vw] flex-col items-center">
       <div>
         <Image
-          src="/home/blurbforhome.jpeg"
-          width={310}
-          height={500}
-          alt="Picture for blurb"
-          className="aspect-[363/376] rounded-[15%] border-2 border-slate-400/60"
+          src={Cupcakes}
+          alt="12 Cupcakes on the table with two people sitting behind it"
+          className="h-[37vh] w-[20vw] rounded-[15%] border-2 border-cvdsa-cornflower-100"
         />
       </div>
 
