@@ -1,5 +1,11 @@
-const Socials = () => {
-  return <div>socials comps here</div>;
+import Social from "@/components/socials/Social";
+
+const SocialPage = () => {
+  return (
+    <div>
+      <Social />
+    </div>
+  );
 };
 
-export default Socials;
+export default SocialPage;
