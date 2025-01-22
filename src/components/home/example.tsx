@@ -13,7 +13,3 @@ const example = () => {
 };
 
 export default example;
-
-// Comments by Jameel:
-// Where I found these sources:
-// Fonts: https://tailwindcss.com/docs/font-family
