@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ResearchConference from "@/public/events/Research Conference.jpeg";
+import ResearchConference from "@/public/research/ResearchConference.webp";
 const ResearchImage = () => {
   return (
     <>
