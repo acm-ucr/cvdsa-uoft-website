@@ -1,6 +1,6 @@
 import MainText from "@/components/home/mainText";
 import Research from "@/components/research/Research";
-import JoinButton from "@/components/home/JoinButton";
+import JoinButton from "@/components/home/joinbutton";
 import AboutUsBlurb from "@/components/home/aboutUsBlurb";
 
 const Home = () => {
