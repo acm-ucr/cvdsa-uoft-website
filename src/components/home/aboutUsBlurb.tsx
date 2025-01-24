@@ -1,8 +1,22 @@
 const AboutUsBlurb = () => {
   return (
-    <div className="relative mt-[30vh] flex items-center justify-center">
-      <img src="home/aboutusframe.png" width={1200} className="flex-shrink-0" />
-      <img src="home/aboutusimg.png" width={580} className="absolute left-48" />
+    <div className="ml-[10vw] mt-[5vw] h-[40vw] w-[80vw] rounded-3xl border-4">
+      <div className="mt-[39vh] flex items-center justify-center">
+        <img
+          src="home/aboutusimg.webp"
+          className="absolute mr-[35vw] w-[39vw]"
+        />
+      </div>
+      <h2 className="ml-[45vw] mt-[-15vw] font-seasons text-6xl"> ABOUT US </h2>
+      <h3 className="ml-[45vw] mt-[2vw] max-w-[30vw] font-seasons text-[20px]">
+        The Cardiovascular Disease Student Association (CVDSA) is a student-led
+        advocacy group dedicated to raising awareness and funds in collaboration
+        with charities like the Heart & Stroke Foundation of Canada. Our
+        organization operates through five distinct committees: Events and
+        Education, Research, Finance, Marketing, and Develpment. Together, we
+        aim to increase awareness of cardiovascular diseases, inspire student
+        engagement in research, and support charitable fundraising efforts.
+      </h3>
     </div>
   );
 };
