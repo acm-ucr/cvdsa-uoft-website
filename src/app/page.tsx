@@ -1,11 +1,15 @@
 import MainText from "@/components/home/mainText";
-import Events from "../components/events/Events";
+import JoinText from "@/components/home/JoinText";
+import BannerImage from "../components/events/BannerImage";
+import ResearchImage from "@/components/research/researchImage";
 
 const Home = () => {
   return (
     <div>
+      <JoinText />
       <MainText />
-      <Events/>
+      <BannerImage />
+      <ResearchImage />
     </div>
   );
 };
