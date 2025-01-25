@@ -8,7 +8,7 @@ const BannerImage = () => {
       <div>
         <Image
           src={classroom}
-          className="relative inset-0 top-[97.8px] overflow-hidden object-cover object-top"
+          className="w-screen top-[97.8px]"
           alt={"Research Conference"}
         />
       </div>
