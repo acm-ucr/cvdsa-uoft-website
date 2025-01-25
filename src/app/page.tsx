@@ -5,8 +5,6 @@ import BannerImage from "@/components/events/BannerImage";
 const Home = () => {
   return (
     <div>
-      <JoinText />
-      <MainText />
       <BannerImage />
     </div>
   );
