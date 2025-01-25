@@ -1,5 +1,11 @@
+import HomeButton from "@/components/error/NotFound";
+
 const NotFound = () => {
-  return <div>404 Page Not Found</div>;
+  return (
+    <div>
+      <HomeButton></HomeButton>
+    </div>
+  );
 };
 
 export default NotFound;

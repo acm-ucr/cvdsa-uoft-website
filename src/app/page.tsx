@@ -1,9 +1,11 @@
-import Example from "@/components/home/example";
+import MainText from "@/components/home/mainText";
+import HomePage from "@/components/home/homepage";
 
 const Home = () => {
   return (
     <div>
-      <Example />
+      <MainText />
+      <HomePage />
     </div>
   );
 };

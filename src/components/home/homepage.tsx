@@ -1,4 +1,4 @@
-const example = () => {
+const HomePage = () => {
   return (
     <div className="
     flex h-screen w-screen items-center 
@@ -8,4 +8,4 @@ const example = () => {
   );
 };
 
-export default example;
+export default HomePage;
