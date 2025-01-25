@@ -8,7 +8,7 @@ const BannerImage = () => {
       <div>
         <Image
           src={classroom}
-          className="w-screen top-[97.8px]"
+          className="top-[97.8px] w-screen"
           alt={"Research Conference"}
         />
       </div>
