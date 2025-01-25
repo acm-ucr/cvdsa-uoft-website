@@ -10,8 +10,8 @@ const BannerImage = () => {
         <Image
           src={classroom}
           className="
-          w-screen overflow-hidden object-cover relative 
-          object-top h-[600px] inset-0"
+          overflow-hidden object-cover relative 
+          object-top top-[97.8px] h-[243px] w-[1479px] inset-0"
           alt={"Research Conference"}
         />
       </div>
