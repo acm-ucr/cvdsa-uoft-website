@@ -1,8 +1,6 @@
 const HomePage = () => {
   return (
-    <div className="
-    flex h-screen w-screen items-center 
-    text-center mx-auto justify-center text-[4vw] text-black">
+    <div className="mx-auto flex h-screen w-screen items-center justify-center text-center text-[4vw] text-black">
       CARDIOVASCULAR DISEASE STUDENT ASSOCIATION
     </div>
   );
