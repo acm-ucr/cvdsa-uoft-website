@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Cupcakes from "@/public/home/cupcakes.jpeg";
+import Cupcakes from "@/public/home/cupcakes.webp";
 
 const BlurbHome = () => {
   return (
