@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import classroom from "@/public/events/classroom.png";
+import classroom from "@/public/events/classroom.webp";
 
 
 const BannerImage = () => {
