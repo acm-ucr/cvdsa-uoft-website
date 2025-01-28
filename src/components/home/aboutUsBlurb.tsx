@@ -1,13 +1,19 @@
+import React from "react";
+import Image from "next/image";
+
 const AboutUsBlurb = () => {
   return (
     <div className="ml-[10vw] mt-[5vw] h-[40vw] w-[80vw] rounded-3xl border-4">
-      <div className="mt-[39vh] flex items-center justify-center">
-        <img
-          src="home/aboutusimg.webp"
+      <div className="mt-[40vh] flex items-center justify-center">
+        <Image
+          src="/home/aboutusimg.webp"
+          alt="Group Club Photo"
+          width={0}
+          height={0}
           className="absolute mr-[35vw] w-[39vw]"
         />
       </div>
-      <h2 className="ml-[45vw] mt-[-15vw] font-seasons text-6xl"> ABOUT US </h2>
+      <h2 className="ml-[45vw] mt-[-14vw] font-seasons text-6xl"> ABOUT US </h2>
       <h3 className="ml-[45vw] mt-[2vw] max-w-[30vw] font-seasons text-[20px]">
         The Cardiovascular Disease Student Association (CVDSA) is a student-led
         advocacy group dedicated to raising awareness and funds in collaboration
