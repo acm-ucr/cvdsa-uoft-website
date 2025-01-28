@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Cupcakes from "@/public/home/cupcakes.webp";
 
-
 const BlurbHome = () => {
   return (
     <div className="flex w-[30vw] flex-col items-center">
