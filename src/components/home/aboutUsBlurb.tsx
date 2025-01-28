@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import aboutBlurb from "@/public/home/aboutusimg.webp";
 
 const AboutUsBlurb = () => {
   return (
     <div className="ml-[10vw] mt-[5vw] h-[40vw] w-[80vw] rounded-3xl border-4">
       <div className="mt-[40vh] flex items-center justify-center">
         <Image
-          src="/home/aboutusimg.webp"
+          src={aboutBlurb}
           alt="Group Club Photo"
-          width={0}
-          height={0}
           className="absolute mr-[35vw] w-[39vw]"
         />
       </div>
