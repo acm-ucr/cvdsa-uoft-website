@@ -113,22 +113,21 @@ function Calendar({
         classNames={{
           month: "space-y-[0.5vw]",
           caption:
-            "flex pt-[0.5vh] items-center relative mb-[3vh]",
+            "justify-center flex pl-[80vh] pt-[0.5vh] items-center relative mb-[3vh]",
           caption_label: "font-bold text-[2.5vw]",
           nav: "space-x-[0.5vw] flex items-center",
           nav_button: cn(
             buttonVariants({ variant: "outline" }),
             "h-[2vw] w-[2vw] bg-transparent p-0",
           ),
-          nav_button_previous: "absolute left-[30vw]",
-          nav_button_next: "absolute right-[5vw]",
+          nav_button_previous: "absolute left-[45vw]",
+          nav_button_next: "absolute right-[2vw]",
           table: "w-full space-y-[1vw] bg-white rounded-b-3xl drop-shadow-2xl",
           head_row:
             "flex bg-cvdsa-orange-100 font-seasons mb-0 w-full aspect-[15/1] rounded-t-3xl text-center items-center",
-          head_cell:
-            "rounded-md w-[9.7vw] text-[2.3vw] font-light text-white",
+          head_cell: "rounded-md w-[9.7vw] text-[2.3vw] font-light text-white",
           row: "flex w-full mt-0",
-          cell: "relative aspect-[4/1] p-0 text-center text-[1vw]",
+          cell: "relative aspect-[4/1] p-0 text-center text-[1vw] border-l border-black first:border-l-0 last:border-r-0 [&:first-child]:border-t-0 [&:last-child]:border-b-0",
           day_today: "bg-accent text-accent-foreground",
           day_outside:
             "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
@@ -143,7 +142,9 @@ function Calendar({
             return days[date.getDay()];
           },
           formatCaption: (month) =>
-            month.toLocaleDateString("en-US", { month: "short", year: "numeric" }).toUpperCase(),
+            month
+              .toLocaleDateString("en-US", { month: "short", year: "numeric" })
+              .toUpperCase(),
         }}
         components={{
           IconLeft: () => (

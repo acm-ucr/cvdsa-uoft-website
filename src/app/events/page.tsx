@@ -13,7 +13,7 @@ const CalendarCall = ({ events }: { events: EventProps[] }) => {
         selected={date}
         onSelect={setDate}
         events={events}
-        className="mb-[45vh] ml-[16.5vw] w-[67vw] bg-hearts-beige text-hearts-brown"
+        className="bg-hearts-beige text-hearts-brown mb-[45vh] ml-[16.5vw] w-[67vw]"
       />
     </div>
   );
