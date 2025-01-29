@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import logo from "@/public/logo.webp";
 import { items } from "@/data/navigation";
-import { IoMdMenu } from "react-icons/io";
+import { AlignJustify } from "lucide-react";
 
 const Navigation = () => {
   const [selected, setSelected] = useState("");
@@ -75,7 +75,7 @@ const Navigation = () => {
         ))}
       </div>
       <div onClick={handleNav}>
-        <IoMdMenu className="justify-self-end text-3xl text-black hover:cursor-pointer hover:opacity-60 md:hidden" />
+        <AlignJustify className="justify-self-end text-3xl text-black hover:cursor-pointer hover:opacity-60 md:hidden" />
       </div>
     </div>
   );
