@@ -1,9 +1,9 @@
-import Social from "@/components/socials/Social";
+import SocialBanner from "@/components/socials/Social";
 
 const SocialPage = () => {
   return (
     <div>
-      <Social />
+      <SocialBanner />
     </div>
   );
 };
