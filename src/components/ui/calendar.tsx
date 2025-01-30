@@ -113,7 +113,7 @@ function Calendar({
         classNames={{
           month: "space-y-[0.5vw]",
           caption:
-            "justify-center flex pl-[80vh] pt-[0.5vh] items-center relative mb-[3vh]",
+            "justify-center flex pl-[43.5vw] pt-[0.5vh] items-center relative mb-[3vh]",
           caption_label: "font-bold text-[2.5vw]",
           nav: "space-x-[0.5vw] flex items-center",
           nav_button: cn(
