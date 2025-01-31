@@ -1,3 +1,4 @@
+import BlurbHome from "@/components/home/BlurbHome";
 import MainText from "@/components/home/mainText";
 import Research from "@/components/research/Research";
 import JoinButton from "@/components/home/joinbutton";
@@ -7,6 +8,7 @@ const Home = () => {
   return (
     <div>
       <MainText />
+      <BlurbHome />
       <Research />
       <JoinButton />
       <AboutUsBlurb />
