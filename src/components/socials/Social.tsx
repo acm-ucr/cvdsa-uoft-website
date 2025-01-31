@@ -3,7 +3,7 @@ import socialsimage from "@/public/social/socialsimage.webp";
 
 const SocialBanner = () => {
   return (
-    <div className="relative flex w-full overflow-hidden">
+    <div className="w-full">
       <Image src={socialsimage} alt="Socials Banner" />
     </div>
   );
