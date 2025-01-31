@@ -8,7 +8,7 @@ const AboutUsBlurb = () => {
         <Image
           src={aboutBlurb}
           alt="Group Club Photo"
-          className="absolute mr-[35vw] w-[39vw]"
+          className="w-[39vw]"
         />
       </div>
       <h2 className="ml-[45vw] mt-[-14vw] font-seasons text-6xl"> ABOUT US </h2>
