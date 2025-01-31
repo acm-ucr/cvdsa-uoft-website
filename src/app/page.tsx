@@ -10,7 +10,6 @@ const Home = () => {
     <div>
       <MainText />
       <HomePage />
-      <Research />
       <JoinButton />
       <AboutUsBlurb />
       <BlurbHome />
