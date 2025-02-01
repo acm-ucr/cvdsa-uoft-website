@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <MainText />
-      <BlurbHome title={""} description={""} image={""} />
+      <BlurbHome />
     </div>
   );
 };
