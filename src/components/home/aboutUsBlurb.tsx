@@ -13,7 +13,7 @@ const AboutUsBlurb = () => {
       </div>
       <div className="mt-[2vh] flex-col">
         <p className="font-seasons text-[9vh]"> ABOUT US </p>
-        <p className="max-w-[30vw] font-seasons text-[3vh]">
+        <p className="max-w-[30vw] font-seasons text-[2.8vh]">
           The Cardiovascular Disease Student Association (CVDSA) is a
           student-led advocacy group dedicated to raising awareness and funds in
           collaboration with charities like the Heart & Stroke Foundation of
