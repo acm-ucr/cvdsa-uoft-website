@@ -16,8 +16,3 @@ const MainText = () => {
 };
 
 export default MainText;
-
-//w-full aspect-[16/9]
-//h-auto w-full
-
-//flex aspect-[1414/1000] w-full justify-center bg-[url('/home/landing.svg')] bg-cover bg-center bg-no-repeat font-seasons text-[6vw]
