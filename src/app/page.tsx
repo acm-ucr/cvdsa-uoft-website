@@ -1,15 +1,11 @@
 import BlurbHome from "@/components/home/BlurbHome";
-import MainText from "@/components/home/mainText";
-import HomePage from "@/components/home/homepage";
-import JoinButton from "@/components/home/joinbutton";
+import Header from "@/components/home/Header";
 import AboutUsBlurb from "@/components/home/AboutUsBlurb";
 
 const Home = () => {
   return (
     <div>
-      <MainText />
-      <HomePage />
-      <JoinButton />
+      <Header />
       <AboutUsBlurb />
       <BlurbHome />
     </div>
