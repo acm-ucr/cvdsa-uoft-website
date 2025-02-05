@@ -1,18 +1,22 @@
-import Cupcakes from "@/public/home/cupcakes.webp";
 import BlurbHomeProps from "./BlurbHomeProps";
+import blurbData from "@/data/blurbData.js";
+import JoinText from "./JoinText";
 
 const BlurbHome = () => {
   return (
-    <div>
-      <BlurbHomeProps
-        title="Collaborations"
-        description="We collaborate with various organizations, including SAGE and St. John
-        Ambulance (SJA) Canada. We plan to host campus-wide events and are
-        actively networking with other groups focused on cardiovascular disease
-        initiatives!"
-        image={Cupcakes}
-        alt="12 Cupcakes on the table with two people sitting behind it"
-      />
+    <div className="mt-[23vh]">
+      <JoinText />
+      <div className="mt-[12vh] columns-3 grid-rows-1">
+        {blurbData.map((blurb, index) => (
+          <BlurbHomeProps
+            key={index}
+            title={blurb.title}
+            description={blurb.description}
+            image={blurb.image}
+            alt={blurb.alt}
+          />
+        ))}
+      </div>
     </div>
   );
 };
