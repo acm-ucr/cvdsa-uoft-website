@@ -1,7 +1,13 @@
+import BlurbHome from "@/components/home/BlurbHome";
+import Header from "@/components/home/Header";
+import AboutUsBlurb from "@/components/home/AboutUsBlurb";
+
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+    <div>
+      <Header />
+      <AboutUsBlurb />
+      <BlurbHome />
     </div>
   );
 };

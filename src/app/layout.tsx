@@ -1,8 +1,9 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import Navigation from "@/components/Navigation";
 import { ReactQueryClientProvider } from "@/utils/react-query";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "UofT Cardiovascular Disease Student Association",
@@ -17,7 +18,8 @@ type LayoutProps = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
+        <Navigation />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>

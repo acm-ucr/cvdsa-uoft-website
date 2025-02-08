@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        seasons: ["The Seasons"],
+      },
       colors: {
         cvdsa: {
           "red-100": "#F2918F",
