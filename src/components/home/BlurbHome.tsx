@@ -1,12 +1,11 @@
 import BlurbHomeProps from "./BlurbHomeProps";
 import blurbData from "@/data/blurbData.js";
-import JoinText from "./JoinText";
 
 const BlurbHome = () => {
   return (
     <div className="mt-[23vh]">
-      <JoinText />
-      <div className="mt-[12vh] columns-3 grid-rows-1">
+      <p className="ml-[10vw] font-seasons text-[4vw]">WHY JOIN?</p>
+      <div className="mx-[12vw] mt-[11vh] columns-3 grid-rows-1">
         {blurbData.map((blurb, index) => (
           <BlurbHomeProps
             key={index}
