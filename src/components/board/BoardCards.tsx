@@ -1,15 +1,15 @@
 import BoardCard from "./BoardCard";
-import Andrew from "@/public/board/Andrew.jpeg";
-import Angela from "@/public/board/Angela.jpeg";
-import Elizabeth from "@/public/board/Elizabeth.jpg";
-import Isabel from "@/public/board/Isabel.jpg";
-import Maggie from "@/public/board/Maggie.jpg";
-import Mohamad from "@/public/board/Mohamad.jpeg";
-import Santhija from "@/public/board/Santhija.jpg";
-import Sena from "@/public/board/Sena.jpeg";
-import Tiffany from "@/public/board/Tiffany.jpg";
-import Utsha from "@/public/board/Utsha.jpg";
-import Yvonne from "@/public/board/Yvonne.jpeg";
+import Andrew from "@/public/board/Andrew.webp";
+import Angela from "@/public/board/Angela.webp";
+import Elizabeth from "@/public/board/Elizabeth.webp";
+import Isabel from "@/public/board/Isabel.webp";
+import Maggie from "@/public/board/Maggie.webp";
+import Mohamad from "@/public/board/Mohamad.webp";
+import Santhija from "@/public/board/Santhija.webp";
+import Sena from "@/public/board/Sena.webp";
+import Tiffany from "@/public/board/Tiffany.webp";
+import Utsha from "@/public/board/Utsha.webp";
+import Yvonne from "@/public/board/Yvonne.webp";
 
 const BoardCards = () => {
   return (
