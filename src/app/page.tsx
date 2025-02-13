@@ -1,9 +1,13 @@
-import Research from "@/components/research/Research";
+import BlurbHome from "@/components/home/BlurbHome";
+import Header from "@/components/home/Header";
+import AboutUsBlurb from "@/components/home/AboutUsBlurb";
 
 const Home = () => {
   return (
     <div>
-      <Research />
+      <Header />
+      <AboutUsBlurb />
+      <BlurbHome />
     </div>
   );
 };
