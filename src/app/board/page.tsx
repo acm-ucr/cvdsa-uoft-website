@@ -1,5 +1,10 @@
+import BoardCards from "@/components/board/BoardCards";
 const Board = () => {
-  return <div>board comps here</div>;
+  return (
+    <div>
+      <BoardCards />
+    </div>
+  );
 };
 
 export default Board;
