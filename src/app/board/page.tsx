@@ -1,10 +1,5 @@
-import BoardCards from "@/components/board/BoardCards";
 const Board = () => {
-  return (
-    <div>
-      <BoardCards />
-    </div>
-  );
+  return <div>Hello World</div>;
 };
 
 export default Board;
