@@ -1,11 +1,12 @@
-import SocialBanner from "@/components/socials/Social";
+import { SocialBanner, SocialPage } from "@/components/socials/Social";
 
-const SocialPage = () => {
+const SocialPageWrapper = () => {
   return (
     <div>
       <SocialBanner />
+      <SocialPage />
     </div>
   );
 };
 
-export default SocialPage;
+export default SocialPageWrapper;
