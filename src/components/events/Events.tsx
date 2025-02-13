@@ -21,7 +21,7 @@ const events = [
 const UpcomingEvents = () => {
   return (
     <div className="mt-8 flex flex-col items-center">
-      <h2 className="flex justify-center font-seasons text-[3vw]">
+      <h2 className="m-4 flex justify-center font-seasons text-[4vw]">
         UPCOMING EVENTS
       </h2>
       <div className="flex gap-12">
