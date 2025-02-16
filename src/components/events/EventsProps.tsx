@@ -19,7 +19,7 @@ const EventsProps: React.FC<CardProps> = ({
         <p className="text-[4vw]">{date}</p>
       </div>
 
-      <div className="rounded-r-lg bg-purple-100 py-4 pl-6">
+      <div className="rounded-r-lg bg-indigo-200 py-4 pl-6">
         <p className="text-[2vw]">{title}</p>
         <p className="text-[1vw] text-gray-700">{description}</p>
       </div>
