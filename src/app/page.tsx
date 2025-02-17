@@ -1,9 +1,13 @@
-import MainText from "@/components/home/mainText";
+import BlurbHome from "@/components/home/BlurbHome";
+import Header from "@/components/home/Header";
+import AboutUsBlurb from "@/components/home/AboutUsBlurb";
 
 const Home = () => {
   return (
     <div>
-      <MainText />
+      <Header />
+      <AboutUsBlurb />
+      <BlurbHome />
     </div>
   );
 };
