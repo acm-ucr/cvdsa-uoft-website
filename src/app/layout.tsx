@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="en">
       <body className={montserrat.className}>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <Footer></Footer>
       </body>
     </html>
   );
