@@ -1,11 +1,7 @@
 import MemberCards from "@/components/board/MemberCards";
 
 const Board = () => {
-  return (
-    <div>
-      <MemberCards />
-    </div>
-  );
+  return <div>Hello World</div>;
 };
 
 export default Board;
