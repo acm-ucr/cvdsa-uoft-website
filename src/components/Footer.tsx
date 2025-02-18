@@ -19,8 +19,8 @@ const Footer = () => {
         <div>27 King's College Cir, Toronto,</div>
         <div> ON M5S 1A1</div>
         <div className="mt-2 flex justify-end gap-3">
-        <Link href="https://www.instagram.com/cvdsa.uoft?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            <FaInstagram className="h-6 w-6"/>
+          <Link href="https://www.instagram.com/cvdsa.uoft?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+            <FaInstagram className="h-6 w-6" />
           </Link>
           <Link href="mailto:cvdsa.uoft@gmail.com">
             <Mail className="h-6 w-6" />
