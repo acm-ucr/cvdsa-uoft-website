@@ -1,7 +1,9 @@
 const Research = () => {
   return (
-    <div className="flex justify-center font-seasons text-[3vw]">
-      <p>RESEARCH</p>
+    <div className="flex flex-col justify-center text-center text-[3vw]">
+      <p className="font-seasons">RESEARCH</p>
+      <p className="text-xl">Click on these for access to more</p>
+      <p className="text-xl">resources!</p>
     </div>
   );
 };
