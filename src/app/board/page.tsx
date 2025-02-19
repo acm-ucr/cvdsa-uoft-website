@@ -1,5 +1,5 @@
 const Board = () => {
-  return <div>board comps here</div>;
+  return <div>Hello World</div>;
 };
 
 export default Board;

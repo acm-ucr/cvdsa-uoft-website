@@ -18,11 +18,11 @@ const BlurbHomeProps: React.FC<CardProps> = ({
         <Image
           src={image}
           alt={alt}
-          className="h-[37vh] w-[20vw] rounded-[15%] border-2 border-cvdsa-cornflower-100"
+          className="h-[45vh] w-[23vw] rounded-[15%] border-2 border-cvdsa-cornflower-100"
         />
       </div>
-      <h2 className="my-[1vh] text-[1.7vw] font-medium">{title}</h2>
-      <p className="w-[18vw] text-center text-[0.9vw] font-light leading-tight">
+      <h2 className="my-[2vh] text-[2vw] font-medium">{title}</h2>
+      <p className="w-[19vw] text-center text-[1vw] font-light leading-tight">
         {description}
       </p>
     </div>
