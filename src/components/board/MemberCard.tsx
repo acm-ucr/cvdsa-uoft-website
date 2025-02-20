@@ -2,8 +2,8 @@ import "lucide-react";
 
 const MemberCard = ({ name }: { name: string }) => {
   return (
-    <div className="flex w-[21vw] flex-col items-center">
-      <p className="mb-[5%] text-[2vw] font-medium">{name}</p>
+    <div className="flex flex-col items-center">
+      <p className="mb-[5%] text-sm">{name}</p>
     </div>
   );
 };
