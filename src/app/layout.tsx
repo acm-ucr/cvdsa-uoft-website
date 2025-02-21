@@ -22,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps) {
       <body className={montserrat.className}>
         <Navigation />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );
