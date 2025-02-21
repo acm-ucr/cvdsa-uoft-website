@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="grid grid-cols-3 bg-gradient-to-r from-cvdsa-red-200 via-cvdsa-orange-100 via-10% to-cvdsa-purple-100 text-white">
-      <div className=" col-span-2 mb-4 mt-4 pl-4">
+      <div className="col-span-2 mb-4 mt-4 pl-4">
         <p>Subscribe to our Newsletter!</p>
         <div className="mt-2 flex items-center">
           <Link
