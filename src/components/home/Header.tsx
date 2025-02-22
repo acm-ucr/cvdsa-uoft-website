@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="relative mb-[3%] flex h-[80vh] flex-col items-center justify-center text-[5.5vw]">
+    <div className="relative mb-[3%] flex min-h-[35vh] flex-col items-center justify-center text-[5.5vw] sm:h-[80vh]">
       <Image src={landing} alt="landing" className="absolute -z-10 w-screen" />
-      <p className="font-seasons font-semibold tracking-tight text-white">
+      <p className="font-seasons text-3xl font-semibold tracking-tight text-white">
         UNIVERSITY OF TORONTO
       </p>
 
-      <p className="w-[50%] text-center text-[2.4vw] text-white">
+      <p className="w-[50%] text-center text-[2.4vw] text-sm text-white">
         CARDIOVASCULAR DISEASE STUDENT ASSOCIATION
       </p>
 
