@@ -1,6 +1,6 @@
-import { Mail } from "lucide-react";
 import Link from "next/link";
-import { FaInstagram } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+import { IoMailOutline } from "react-icons/io5";
 const Footer = () => {
   return (
     <div className="grid grid-cols-3 bg-gradient-to-r from-cvdsa-red-200 via-cvdsa-orange-100 via-10% to-cvdsa-purple-100 text-white">
@@ -9,6 +9,7 @@ const Footer = () => {
         <div className="mt-2 flex items-center">
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScp2vI1qp2TY2f7dkbMfajwCw87RrSyBeHAgDQGOa-4E7NfgQ/viewform"
+            target="_blank"
             className="rounded-2xl bg-white px-4 py-2 text-black"
           >
             Subscribe!
@@ -18,12 +19,15 @@ const Footer = () => {
       <div className="mr-4 mt-2 text-right text-sm">
         <p>27 King's College Cir, Toronto,</p>
         <p> ON M5S 1A1</p>
-        <div className="mt-2 flex justify-end gap-3">
-          <Link href="https://www.instagram.com/cvdsa.uoft?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            <FaInstagram className="h-6 w-6" />
+        <div className="flex justify-end gap-3 md:mt-2">
+          <Link
+            href="https://www.instagram.com/cvdsa.uoft?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+          >
+            <IoLogoInstagram className="text-4xl" />
           </Link>
-          <Link href="mailto:cvdsa.uoft@gmail.com">
-            <Mail className="h-6 w-6" />
+          <Link href="mailto:cvdsa.uoft@gmail.com" target="_blank">
+            <IoMailOutline className="text-4xl" />
           </Link>
         </div>
       </div>
