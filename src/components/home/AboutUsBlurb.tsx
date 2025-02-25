@@ -3,7 +3,7 @@ import aboutBlurb from "@/public/home/aboutusimg.webp";
 
 const AboutUsBlurb = () => {
   return (
-    <div className="mx-[10vw] flex justify-center rounded-3xl bg-white px-[3vw] py-[4vh] shadow-xl">
+    <div className="mx-[10vw] mt-[-15vh] flex justify-center rounded-3xl bg-white px-[3vw] py-[4vh] shadow-xl">
       <Image src={aboutBlurb} alt="Group Club Photo" className="mr-[5vw]" />
       <div className="flex-col">
         <p className="font-seasons text-[9vh]">ABOUT US</p>
