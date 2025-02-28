@@ -1,10 +1,8 @@
-import { SocialBanner, SocialPage } from "@/components/socials/Social";
-
+import Contacts from "@/components/socials/Contacts";
 const SocialPageWrapper = () => {
   return (
     <div>
-      <SocialBanner />
-      <SocialPage />
+      <Contacts />
     </div>
   );
 };
