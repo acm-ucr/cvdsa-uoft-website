@@ -14,18 +14,20 @@ export const SocialBanner = () => {
 
 export const SocialPage = () => {
   return (
-    <div className="flex justify-center">
+    <div className="mt-[15vh] flex justify-center">
       <SocialBlurb
         title="Follow us on Instagram!"
         description="Keep up with the details about upcoming new events!"
         image={instagram}
         link=""
+        delay={0}
       />
       <SocialBlurb
         title="Reach Out!"
         description="Here's our email if you need to contact us!"
         image={email}
         link=""
+        delay={1}
       />
     </div>
   );
