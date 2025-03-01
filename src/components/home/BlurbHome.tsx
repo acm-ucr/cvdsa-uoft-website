@@ -1,8 +1,8 @@
 "use client";
 import BlurbHomeProps from "./BlurbHomeProps";
 import { blurbCollaborations } from "@/data/blurbData.js";
-import { blurbMeeting } from "@/data/blurbData.js";
-import { blurbConference } from "@/data/blurbData.js";
+// import { blurbMeeting } from "@/data/blurbData.js";
+// import { blurbConference } from "@/data/blurbData.js";
 import { motion } from "motion/react";
 
 const BlurbHome = () => {
@@ -26,7 +26,7 @@ const BlurbHome = () => {
             />
           ))}
         </motion.div>
-
+{/* 
         <motion.div
           className="mx-[6vw] mt-[11vh] grid-rows-1"
           whileInView={{ opacity: ["20%", "100%"], x: ["40%", "0%"] }}
@@ -57,7 +57,7 @@ const BlurbHome = () => {
               alt={blurb.alt}
             />
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

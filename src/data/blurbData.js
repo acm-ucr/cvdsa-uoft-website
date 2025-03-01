@@ -10,9 +10,6 @@ const blurbCollaborations = [
     image: Meeting,
     alt: "Meeting of people with somebody presenting at the front",
   },
-];
-
-const blurbMeeting = [
   {
     title: "Fundraisers",
     description:
@@ -20,9 +17,6 @@ const blurbMeeting = [
     image: Cupcakes,
     alt: "12 Cupcakes on the table with two people sitting behind it",
   },
-];
-
-const blurbConference = [
   {
     title: "Conferences",
     description:
@@ -32,6 +26,13 @@ const blurbConference = [
   },
 ];
 
+// const blurbMeeting = [
+// ];
+
+// const blurbConference = [
+  
+// ];
+
 export { blurbCollaborations };
-export { blurbMeeting };
-export { blurbConference };
+// export { blurbMeeting };
+// export { blurbConference };
