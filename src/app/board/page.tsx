@@ -1,6 +1,6 @@
 import MemberCards from "@/components/board/MemberCards";
 
-export const Board = () => {
+const Board = () => {
   return (
     <div>
       <MemberCards />
