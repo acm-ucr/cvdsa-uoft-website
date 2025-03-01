@@ -1,7 +1,7 @@
 import Link from "next/link";
 const NotFound = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="flex h-screen flex-col items-center justify-center text-center">
       <p className="py-9 text-4xl">
         Sorry, the page you were<br></br>
         looking for was not found!
