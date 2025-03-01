@@ -30,7 +30,7 @@ const blurbCollaborations = [
 // ];
 
 // const blurbConference = [
-  
+
 // ];
 
 export { blurbCollaborations };

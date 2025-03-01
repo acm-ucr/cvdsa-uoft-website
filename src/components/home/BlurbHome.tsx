@@ -26,7 +26,7 @@ const BlurbHome = () => {
             />
           ))}
         </motion.div>
-{/* // DELETE THIS COMMENT
+        {/* // DELETE THIS COMMENT
         <motion.div
           className="mx-[6vw] mt-[11vh] grid-rows-1"
           whileInView={{ opacity: ["20%", "100%"], x: ["40%", "0%"] }}
