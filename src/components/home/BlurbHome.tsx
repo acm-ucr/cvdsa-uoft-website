@@ -1,6 +1,6 @@
 "use client";
 import BlurbHomeProps from "./BlurbHomeProps";
-import { blurbCollaborations } from "@/data/blurbData.js";
+import blurbData from "@/data/blurbData.js";
 // import { blurbMeeting } from "@/data/blurbData.js";
 // import { blurbConference } from "@/data/blurbData.js";
 import { motion } from "motion/react";
@@ -8,46 +8,22 @@ import { motion } from "motion/react";
 const BlurbHome = () => {
   return (
     <div className="mt-[23vh]">
-      <p className="ml-[10vw] font-seasons text-[4vw]">WHY JOIN?</p>
-      <div className="mt-[15vh] columns-3">
-        <motion.div
-          className="mx-[6vw] mt-[11vh] grid-rows-1"
-          whileInView={{ opacity: ["20%", "100%"], x: ["20%", "0%"] }}
-          transition={{ duration: 1 }}
-        >
-          {blurbCollaborations.map((blurb, index) => (
-            <BlurbHomeProps
-              key={index}
-              title={blurb.title}
-              description={blurb.description}
-              image={blurb.image}
-              alt={blurb.alt}
-            />
-          ))}
-        </motion.div>
-        {/* // DELETE THIS COMMENT
-        <motion.div
-          className="mx-[6vw] mt-[11vh] grid-rows-1"
-          whileInView={{ opacity: ["20%", "100%"], x: ["40%", "0%"] }}
-          transition={{ duration: 1 }}
-        >
-          {blurbMeeting.map((blurb, index) => (
-            <BlurbHomeProps
-              key={index}
-              title={blurb.title}
-              description={blurb.description}
-              image={blurb.image}
-              alt={blurb.alt}
-            />
-          ))}
-        </motion.div>
+      <p className="ml-[10vw] columns-3 font-seasons text-[4vw]">WHY JOIN?</p>
+      {/* <motion.div
+        className="mt-[15vh] columns-3 grid-rows-1"
+        whileInView={{ opacity: [`${index * 20}%`, "100%"], x: ["20%", "0%"] }}
+        transition={{ duration: 1 }}
+      > */}
 
-        <motion.div
-          className="mx-[6vw] mt-[11vh] grid-rows-1"
-          whileInView={{ opacity: ["20%", "100%"], x: ["60%", "0%"] }}
-          transition={{ duration: 1 }}
-        >
-          {blurbConference.map((blurb, index) => (
+      <div className="mt-[15vh] columns-3 grid-rows-1">
+        {blurbData.map((blurb, index) => (
+          <motion.div
+            whileInView={{
+              opacity: ["0%", "100%"],
+              x: [`${30 + index * 10}%`, "0%"],
+            }}
+            transition={{ duration: 1, delay: index * 0.3 }}
+          >
             <BlurbHomeProps
               key={index}
               title={blurb.title}
@@ -55,8 +31,8 @@ const BlurbHome = () => {
               image={blurb.image}
               alt={blurb.alt}
             />
-          ))}
-        </motion.div> */}
+          </motion.div>
+        ))}
       </div>
     </div>
   );

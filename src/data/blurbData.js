@@ -2,7 +2,7 @@ import Cupcakes from "@/public/home/cupcakes.webp";
 import Meeting from "@/public/home/meeting.webp";
 import Conference from "@/public/home/conference.webp";
 
-const blurbCollaborations = [
+const blurbData = [
   {
     title: "Collaborations",
     description:
@@ -33,6 +33,6 @@ const blurbCollaborations = [
 
 // ];
 
-export { blurbCollaborations };
+export default blurbData;
 // export { blurbMeeting };
 // export { blurbConference };
