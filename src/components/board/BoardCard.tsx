@@ -2,20 +2,22 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { MdOutlineEmail } from "react-icons/md";
 
-const BoardCard = ({
-  position,
-  image,
-  name,
-  email,
-  year,
-  major,
-}: {
+interface BoardCardTypes {
   image: StaticImageData;
   name: string;
   position: string;
   year: string;
   email: string;
   major: string;
+}
+
+const BoardCard: React.FC<BoardCardTypes> = ({
+  image,
+  name,
+  position,
+  year,
+  email,
+  major,
 }) => {
   return (
     <div className="flex w-[21vw] flex-col items-center">
