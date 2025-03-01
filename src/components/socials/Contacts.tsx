@@ -6,9 +6,12 @@ import Image from "next/image";
 
 const Contacts = () => {
   return (
-    <div className="flex flex-col justify-center">
-      <Image src={socialsimage} alt="Socials Banner" />
-      <div className="grid grid-cols-2">
+    <div className="h-screen">
+      <Image src={socialsimage} alt="Socials Banner" className="w-fit" />
+      <p className="pb-[6vh] pt-[2vh] text-center font-seasons text-[4vw]">
+        SOCIALS
+      </p>
+      <div className="mx-[15%] grid grid-cols-2">
         <ContactCard
           title="Follow us on Instagram!"
           description="Keep up with the details about upcoming new events!"

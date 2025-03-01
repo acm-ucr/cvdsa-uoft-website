@@ -1,10 +1,6 @@
 import Contacts from "@/components/socials/Contacts";
-const SocialPageWrapper = () => {
-  return (
-    <div>
-      <Contacts />
-    </div>
-  );
+const Page = () => {
+  return <Contacts />;
 };
 
-export default SocialPageWrapper;
+export default Page;
