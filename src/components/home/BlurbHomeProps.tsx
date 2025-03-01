@@ -21,7 +21,7 @@ const BlurbHomeProps: React.FC<CardProps> = ({
           className="h-[45vh] w-[23vw] rounded-[15%] border-2 border-cvdsa-cornflower-100"
         />
       </div>
-      <h2 className="my-[2vh] text-[2vw] font-medium">{title}</h2>
+      <p className="my-[2vh] text-[2vw] font-medium">{title}</p>
       <p className="w-[19vw] text-center text-[1vw] font-light leading-tight">
         {description}
       </p>
