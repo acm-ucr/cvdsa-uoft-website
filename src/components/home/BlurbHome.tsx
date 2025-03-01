@@ -9,7 +9,6 @@ const BlurbHome = () => {
   return (
     <div className="mt-[23vh]">
       <p className="ml-[10vw] font-seasons text-[4vw]">WHY JOIN?</p>
-
       <div className="mt-[15vh] columns-3">
         <motion.div
           className="mx-[6vw] mt-[11vh] grid-rows-1"
