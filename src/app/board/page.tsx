@@ -1,9 +1,9 @@
-import TeamList from "@/components/board/MembersList";
+import MemberCards from "@/components/board/MemberCards";
 
 export const Board = () => {
   return (
     <div>
-      <TeamList />
+      <MemberCards />
     </div>
   );
 };

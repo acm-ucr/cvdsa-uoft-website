@@ -1,8 +1,8 @@
 import React from "react";
 import { MdOutlineEmail } from "react-icons/md";
-import { resComInfo } from "./MembersFile"; // Import stored team data
+import { resComInfo } from "./MemberCard"; // Import stored team data
 
-const TeamList = () => {
+const MemberCards = () => {
   return (
     <div className="p-12">
       <div className="m-3 mb-6 flex items-center font-seasons text-[2vw]">
@@ -24,4 +24,4 @@ const TeamList = () => {
   );
 };
 
-export default TeamList;
+export default MemberCards;
