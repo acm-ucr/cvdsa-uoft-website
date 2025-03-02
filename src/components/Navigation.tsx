@@ -31,20 +31,20 @@ const Navigation = () => {
         </p>
       </Link>
       <div className="absolute right-0 hidden w-[40%] items-center justify-evenly text-center md:flex">
-        {items.map((item, index) => (
+        {items.map(({ name, link }, index) => (
           <Link
-            href={item.link}
+            href={link}
             key={index}
             onClick={() => {
-              setSelected(item.name);
+              setSelected(name);
             }}
             className={`border-solid duration-300 hover:opacity-40 ${
-              selected === item.name
+              selected === name
                 ? "inline-block rounded-full border-b-2 bg-cvdsa-red-100 p-4 text-black"
                 : "text-black"
             }`}
           >
-            {item.name}
+            {name}
           </Link>
         ))}
       </div>
@@ -56,21 +56,21 @@ const Navigation = () => {
             : "fixed top-[-100%] hidden transition duration-500 ease-in-out"
         }
       >
-        {items.map((item, index) => (
+        {items.map(({ name, link }, index) => (
           <Link
-            href={item.link}
+            href={link}
             key={index}
             onClick={() => {
-              setSelected(item.name);
+              setSelected(name);
               handleNav();
             }}
             className={`border-solid py-2 duration-300 hover:opacity-60 md:py-0 ${
-              selected === item.name
+              selected === name
                 ? "inline-block rounded-full border-b-2 bg-cvdsa-red-100 p-4 text-black"
                 : "text-black"
             }`}
           >
-            {item.name}
+            {name}
           </Link>
         ))}
       </div>
