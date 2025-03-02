@@ -26,13 +26,4 @@ const blurbData = [
   },
 ];
 
-// const blurbMeeting = [
-// ];
-
-// const blurbConference = [
-
-// ];
-
 export default blurbData;
-// export { blurbMeeting };
-// export { blurbConference };
