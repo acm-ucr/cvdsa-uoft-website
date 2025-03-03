@@ -15,7 +15,7 @@ const Landing = () => {
           ASSOCIATION
         </p>
         <Link
-          href="https://ucsd.edu/"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScp2vI1qp2TY2f7dkbMfajwCw87RrSyBeHAgDQGOa-4E7NfgQ/viewform"
           target="_blank"
           className="rounded-full bg-white px-4 py-2 text-sm shadow-md shadow-black/45 hover:scale-105 md:text-3xl"
         >
