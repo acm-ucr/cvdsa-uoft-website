@@ -7,7 +7,6 @@ const BlurbHome = () => {
   return (
     <div className="mt-[23vh]">
       <p className="ml-[10vw] columns-3 font-seasons text-[4vw]">WHY JOIN?</p>
-
       <div className="mt-[15vh] columns-3 grid-rows-1">
         {blurbData.map((blurb, index) => (
           <motion.div

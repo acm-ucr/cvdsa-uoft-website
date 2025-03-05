@@ -6,7 +6,7 @@ const Landing = () => {
   return (
     <div className="relative z-[-1]">
       <Image src={landing} alt="landing" className="w-screen" />
-      <div className="absolute left-[5vw] top-[7vh] text-center md:left-[15vw] md:top-[30vh]">
+      <div className="absolute left-[5vw] top-[7vh] text-center md:left-[15vw] md:top-[30vh] 2xl:left-[25vw]">
         <p className="font-seasons text-3xl font-semibold tracking-tight text-white md:text-7xl">
           UNIVERSITY OF TORONTO
         </p>

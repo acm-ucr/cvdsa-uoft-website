@@ -1,8 +1,10 @@
 import EventCard from "./EventCard";
-
+import Image from "next/image";
+import classroom from "@/public/events/classroom.webp";
 const UpcomingEvents = () => {
   return (
     <div className="flex flex-col items-center">
+      <Image src={classroom} className="w-screen" alt={"Research Conference"} />
       <p className="m-4 flex justify-center font-seasons text-[4vw]">
         UPCOMING EVENTS
       </p>
