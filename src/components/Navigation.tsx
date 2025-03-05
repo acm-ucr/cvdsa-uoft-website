@@ -13,7 +13,7 @@ const Navigation = () => {
     setNav(!nav);
   };
   return (
-    <div className="sticky top-0 z-30 flex items-center justify-between border-b-4 border-cvdsa-red-200 bg-white text-lg md:text-[1.7vw]">
+    <div className="sticky top-0 z-30 flex items-center border-b-4 border-cvdsa-red-200 bg-white text-lg md:text-2xl">
       <Link
         onClick={() => {
           setSelected("");
@@ -24,9 +24,9 @@ const Navigation = () => {
         <Image
           src={logo}
           alt="Logo"
-          className="left-0 mx-[4%] my-[1%] w-[7%] duration-300 hover:opacity-60 md:w-[20%]"
+          className="mx-4 my-2 w-2/12 duration-300 hover:opacity-60 md:w-1/5"
         />
-        <p className="ml-[0.5%] whitespace-nowrap font-seasons text-2xl text-black md:text-[3vw]">
+        <p className="ml-[0.5%] whitespace-nowrap font-seasons text-3xl text-black md:text-[3vw]">
           CVDSA
         </p>
       </Link>
@@ -75,7 +75,7 @@ const Navigation = () => {
         ))}
       </div>
       <div onClick={handleNav}>
-        <AlignJustify className="justify-self-end text-3xl text-black hover:cursor-pointer hover:opacity-60 md:hidden" />
+        <AlignJustify className="mr-2 text-3xl text-black hover:cursor-pointer hover:opacity-60 md:hidden" />
       </div>
     </div>
   );
