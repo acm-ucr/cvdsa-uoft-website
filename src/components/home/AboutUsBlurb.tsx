@@ -26,7 +26,6 @@ const AboutUsBlurb = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="font-seasons text-xl"
         >
-
           The Cardiovascular Disease Student Association (CVDSA) is a
           student-led advocacy group dedicated to raising awareness and funds in
           collaboration with charities like the Heart & Stroke Foundation of
