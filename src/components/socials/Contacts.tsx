@@ -17,12 +17,14 @@ const Contacts = () => {
           description="Keep up with the details about upcoming new events!"
           image={instagram}
           link=""
+          delay={0}
         />
         <ContactCard
           title="Reach Out!"
           description="Here's our email if you need to contact us!"
           image={email}
           link=""
+          delay={1}
         />
       </div>
     </div>
