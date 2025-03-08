@@ -5,24 +5,26 @@ import { motion } from "framer-motion";
 
 const AboutUsBlurb = () => {
   return (
-    <div className="mx-[10vw] mt-[-15vh] flex justify-center rounded-3xl bg-white px-[3vw] py-[4vh] shadow-xl">
-      <Image src={aboutBlurb} alt="Group Club Photo" className="mr-[5vw]" />
-      <div className="flex-col">
+    <div className="mx-[10%] mt-[-4vh] grid grid-cols-1 items-center justify-center rounded-3xl bg-white py-[2vh] shadow-xl md:mt-[-15vh] md:grid-cols-2 md:py-[4vh]">
+      <div className="px-4 md:px-8">
+        <Image src={aboutBlurb} alt="Group Club Photo" />
+      </div>
+      <div className="flex flex-col px-8">
         <motion.p
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 25 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className="font-seasons text-[9vh]"
+          className="mb-6 mt-8 font-seasons text-5xl md:mt-0 md:text-6xl"
         >
           ABOUT US
         </motion.p>
         <motion.p
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -25 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-          className="font-seasons text-[2.8vh]"
+          className="font-seasons text-xl"
         >
           The Cardiovascular Disease Student Association (CVDSA) is a
           student-led advocacy group dedicated to raising awareness and funds in
