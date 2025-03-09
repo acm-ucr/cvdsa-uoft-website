@@ -8,13 +8,13 @@ const PastEvent = ({
   name: string;
 }) => {
   return (
-    <div className="flex h-[45vh] w-[23vw] flex-col rounded-[8%] border-[0.10vw] border-cvdsa-cornflower-100 bg-white">
+    <div className="flex flex-col rounded-3xl border-2 border-cvdsa-cornflower-100 bg-white">
       <Image
         src={image}
         alt="event pic"
-        className="w-full rounded-t-[8%] border-[0.10vw] border-b-cvdsa-cornflower-100"
+        className="w-full rounded-t-3xl border-2 border-b-cvdsa-cornflower-100"
       />
-      <p className="ml-[5%] mt-[3%] text-[2.3vw] font-medium">{name}</p>
+      <p className="my-4 ml-4 text-4xl font-medium">{name}</p>
     </div>
   );
 };
