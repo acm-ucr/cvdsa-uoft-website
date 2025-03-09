@@ -20,6 +20,7 @@ const buttonVariants = cva(
         ghost:
           "items-start justify-end border border-black border-t-1 border-b-0 border-r-0 border-l-0 hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        monthNavigation: "text-white",
       },
       size: {
         default: "h-9 px-4 py-0",
