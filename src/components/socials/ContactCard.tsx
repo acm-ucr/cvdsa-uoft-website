@@ -21,19 +21,18 @@ const ContactCard: React.FC<BlurbProps> = ({
 }) => {
   return (
     <motion.div
-      className="mx-[5vw] flex w-[35vw] justify-center"
+      className="mx-auto flex w-[50vw] justify-center text-center md:w-[35vw] md:text-left"
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, delay: 0.3 * delay, ease: "easeOut" }}
-      whileHover={{ scale: 1.05 }}
     >
-      <div className="grid grid-cols-3 items-center">
+      <div className="grid grid-cols-1 items-center pb-10 md:grid-cols-3">
         <Link href={link}>
-          <motion.div whileHover={{ scale: 1.1 }}>
+          <motion.div className="hover:scale-105">
             <Image src={image} alt={title} />
           </motion.div>
         </Link>
-        <div className="col-span-2 flex flex-col pl-4">
+        <div className="flex flex-col pt-6 md:col-span-2 md:pl-4 md:pt-0">
           <p className="font-bold">{title}</p>
           <p>{description}</p>
         </div>

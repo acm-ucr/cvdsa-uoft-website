@@ -7,7 +7,7 @@ import ResearchCommittee from "./committees/ResearchCommittee";
 const Committees = () => {
   return (
     <div className="mb-4">
-      <div className="my-[8vh] h-1 w-screen bg-gradient-to-r from-cvdsa-orange-100 to-cvdsa-purple-100"></div>
+      <div className="my-[8vh] h-1 w-[98.91vw] bg-gradient-to-r from-cvdsa-orange-100 to-cvdsa-purple-100"></div>
       <p className="my-[4vh] text-center font-seasons text-5xl">
         MEET THE COMMITTEE MEMBERS
       </p>
