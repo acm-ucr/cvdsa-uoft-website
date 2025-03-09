@@ -2,7 +2,8 @@ import Link from "next/link";
 const NotFound = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
-      <p className="py-9 text-4xl">
+      <p className="text-6xl font-bold">404</p>
+      <p className="py-9 text-2xl md:text-4xl">
         Sorry, the page you were<br></br>
         looking for was not found!
       </p>
