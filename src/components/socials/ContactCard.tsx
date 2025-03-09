@@ -22,7 +22,7 @@ const ContactCard: React.FC<BlurbProps> = ({
   return (
     <motion.div
       className="mx-auto flex w-[50vw] justify-center text-center md:w-[35vw] md:text-left"
-      initial={{ opacity: 0, y: 50, scale: 0.95 }}
+      initial={{ opacity: 0, y: -30, scale: 0.95 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, delay: 0.3 * delay, ease: "easeOut" }}
     >
