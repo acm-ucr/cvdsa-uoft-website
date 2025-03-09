@@ -52,7 +52,7 @@ const Navigation = () => {
       <div
         className={
           nav
-            ? "fixed left-0 right-0 top-7 -z-10 flex w-[100%] flex-col items-center justify-evenly bg-white transition duration-500 ease-in-out md:hidden"
+            ? "fixed left-0 right-0 top-14 -z-10 flex w-[100%] flex-col items-center justify-evenly bg-white transition duration-500 ease-in-out md:hidden"
             : "fixed top-[-100%] hidden transition duration-500 ease-in-out"
         }
       >
