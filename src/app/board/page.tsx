@@ -1,9 +1,11 @@
-import MemberCards from "@/components/board/MemberCards";
+import BoardCards from "@/components/board/BoardCards";
+import Committees from "@/components/board/Committees";
 
 const Board = () => {
   return (
     <div>
-      <MemberCards />
+      <BoardCards />
+      <Committees />
     </div>
   );
 };
