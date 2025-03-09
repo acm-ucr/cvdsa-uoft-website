@@ -9,7 +9,7 @@ const Down = {
   animate: (custom: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 1.5, delay: custom, ease: "backInOut" },
+    transition: { duration: 0.5, delay: custom },
   }),
 };
 
@@ -23,7 +23,6 @@ const Landing = () => {
           viewport={{ once: true, amount: 0 }}
           initial="initial"
           whileInView={"animate"}
-          custom={0.1}
           className="font-seasons text-3xl font-semibold tracking-tight text-white md:text-7xl"
         >
           UNIVERSITY OF TORONTO
