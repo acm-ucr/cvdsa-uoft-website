@@ -10,7 +10,7 @@ const Footer = () => {
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScp2vI1qp2TY2f7dkbMfajwCw87RrSyBeHAgDQGOa-4E7NfgQ/viewform"
             target="_blank"
-            className="rounded-2xl bg-white px-4 py-2 text-black"
+            className="rounded-2xl bg-white px-4 py-2 text-black hover:scale-105"
           >
             Subscribe!
           </Link>
@@ -23,10 +23,15 @@ const Footer = () => {
           <Link
             href="https://www.instagram.com/cvdsa.uoft?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
+            className="hover:scale-105"
           >
             <IoLogoInstagram className="text-4xl" />
           </Link>
-          <Link href="mailto:cvdsa.uoft@gmail.com" target="_blank">
+          <Link
+            href="mailto:cvdsa.uoft@gmail.com"
+            target="_blank"
+            className="hover:scale-105"
+          >
             <IoMailOutline className="text-4xl" />
           </Link>
         </div>

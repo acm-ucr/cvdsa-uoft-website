@@ -13,16 +13,16 @@ const BlurbHomeProps: React.FC<CardProps> = ({
   alt,
 }) => {
   return (
-    <div className="flex w-[30vw] flex-col items-center">
+    <div className="flex flex-col items-center pb-6">
       <div>
         <Image
           src={image}
           alt={alt}
-          className="h-[45vh] w-[23vw] rounded-[15%] border-2 border-cvdsa-cornflower-100"
+          className="rounded-3xl md:h-[45vh] md:w-[23vw]"
         />
       </div>
-      <p className="my-[2vh] text-[2vw] font-medium">{title}</p>
-      <p className="w-[19vw] text-center text-[1vw] font-light leading-tight">
+      <p className="my-[2vh] text-3xl font-medium">{title}</p>
+      <p className="text-center text-sm font-light leading-tight md:w-[23vw]">
         {description}
       </p>
     </div>
