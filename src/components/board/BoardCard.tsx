@@ -3,45 +3,42 @@ import Link from "next/link";
 import { MdOutlineEmail } from "react-icons/md";
 
 interface BoardCardTypes {
-  image: StaticImageData;
   name: string;
   position: string;
+  image: StaticImageData;
   year: string;
   email: string;
   major: string;
 }
 
 const BoardCard: React.FC<BoardCardTypes> = ({
-  image,
   name,
   position,
+  image,
   year,
   email,
   major,
 }) => {
   return (
-    <div className="flex w-[21vw] flex-col items-center">
-      <p className="mb-[5%] text-[2vw] font-medium">{position}</p>
-
+    <div className="flex flex-col">
+      <p className="mb-2 text-center text-xl font-medium">{position}</p>
       <div>
         <Image
           src={image}
-          alt="board pic"
-          className="rounded-[8%] border-[0.15vw] border-cvdsa-cornflower-100"
+          alt="BoardPhoto"
+          className="rounded-xl border-2 border-cvdsa-blue-200"
         />
       </div>
-      <div className="p-[5%] text-[1.4vw]">
-        <div className="flex w-full justify-between">
-          <p className="w-4/5 text-[1.5vw] font-semibold leading-tight">
+      <div className="p-2 text-left text-xl">
+        <div className="grid grid-cols-5 items-center">
+          <p className="col-span-4 text-left text-lg font-semibold leading-tight">
             {name}
           </p>
           <Link href={`mailto:${email}`}>
-            <MdOutlineEmail className="text-[2.8vw] text-cvdsa-blue-100 duration-300 hover:scale-110 hover:text-blue-400" />
+            <MdOutlineEmail className="text-4xl text-cvdsa-blue-100 duration-300 hover:scale-110 hover:text-blue-400" />
           </Link>
         </div>
-
-        <p className="py-[1%]">{year}</p>
-
+        <p>{year}</p>
         <p className="leading-tight">{major}</p>
       </div>
     </div>

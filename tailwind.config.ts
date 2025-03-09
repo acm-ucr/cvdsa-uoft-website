@@ -11,6 +11,7 @@ module.exports = {
           "red-100": "#F2918F",
           "red-200": "#F33734",
           "blue-100": "#B5CBFD",
+          "blue-200": "5DE1E6",
           "orange-100": "#FF754A",
           "purple-100": "#BC99FF",
           "cornflower-100": "#B5CBFD",

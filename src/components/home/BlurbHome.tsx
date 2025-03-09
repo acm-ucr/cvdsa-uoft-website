@@ -1,31 +1,48 @@
 "use client";
 import BlurbHomeProps from "./BlurbHomeProps";
-import blurbData from "@/data/blurbData.js";
-import { motion } from "motion/react";
+import blurbData from "@/data/blurbData";
+import * as motion from "motion/react-client";
+
+const Down = {
+  initial: { opacity: 0, y: -20 },
+  animate: (custom: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, delay: custom },
+  }),
+};
 
 const BlurbHome = () => {
   return (
-    <div className="mt-[23vh]">
-      <p className="ml-[10vw] columns-3 font-seasons text-[4vw]">WHY JOIN?</p>
-      <div className="mt-[15vh] columns-3 grid-rows-1">
-        {blurbData.map((blurb, index) => (
-          <motion.div
-            whileInView={{
-              opacity: ["0%", "100%"],
-              x: [`${20 + index * 10}%`, "0%"],
-            }}
-            transition={{ duration: 0.75, delay: index * 0.2 }}
-          >
-            <BlurbHomeProps
-              key={index}
-              title={blurb.title}
-              description={blurb.description}
-              image={blurb.image}
-              alt={blurb.alt}
-            />
-          </motion.div>
+    <div className="mt-[7vh] md:mt-[15vh]">
+      <motion.p
+        variants={Down}
+        viewport={{ once: true, amount: 0 }}
+        initial="initial"
+        whileInView={"animate"}
+        custom={0.4}
+        className="ml-[10vw] font-seasons text-5xl md:text-7xl"
+      >
+        WHY JOIN?
+      </motion.p>
+      <motion.div
+        variants={Down}
+        viewport={{ once: true, amount: 0 }}
+        initial="initial"
+        whileInView={"animate"}
+        custom={0.9}
+        className="mx-[6vw] mt-[11vh] grid grid-cols-1 md:grid-cols-3"
+      >
+        {blurbData.map(({ title, description, image, alt }, index) => (
+          <BlurbHomeProps
+            key={index}
+            title={title}
+            description={description}
+            image={image}
+            alt={alt}
+          />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
