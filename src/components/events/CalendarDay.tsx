@@ -13,30 +13,20 @@ interface DayProps {
   events: GoogleEventProps[];
 }
 
-const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
-  const today = new Date();
-  const iscurrentMonth = displayMonth.getMonth() === date.getMonth();
-  const isWeekend = date.getDay() === 0 || date.getDay() === 6;
-  const isToday =
-    date.getDate() === today.getDate() &&
-    date.getMonth() === today.getMonth() &&
-    date.getFullYear() === today.getFullYear();
-  const isOtherMonthsFirst =
-    displayMonth.getMonth() !== today.getMonth() && date.getDate() === 1;
-
+const CalendarDay = ({ date, events }: DayProps) => {
   const filteredEvents = events.filter((event) => {
     let eventStartDate: Date | null = null;
     let eventEndDate: Date | null = null;
 
-    if (event.start.dateTime) {
+    if (event.start?.dateTime) {
       eventStartDate = new Date(event.start.dateTime);
-    } else if (event.start.date) {
+    } else if (event.start?.date) {
       eventStartDate = new Date(event.start.date);
     }
 
-    if (event.end.dateTime) {
+    if (event.end?.dateTime) {
       eventEndDate = new Date(event.end.dateTime);
-    } else if (event.end.date) {
+    } else if (event.end?.date) {
       eventEndDate = new Date(event.end.date);
     }
 
@@ -69,56 +59,48 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
     };
 
     updateVisibleEventCount();
-
     window.addEventListener("resize", updateVisibleEventCount);
     return () => window.removeEventListener("resize", updateVisibleEventCount);
   }, []);
 
   return (
-    <div
-      className={`flex h-[10vh] flex-col items-center justify-start gap-y-0.5 sm:gap-y-1 md:h-[14vh] ${iscurrentMonth ? "" : "collapse"} ${isWeekend ? "text-csa-red-200" : "text-csa-gray-200"} ${isToday || isOtherMonthsFirst ? "bg-csa-red-200 text-csa-yellow-400" : ""} rounded-lg md:rounded-xl`}
-    >
-      <p className="mt-[1vh] text-base sm:text-lg md:text-2xl 2xl:text-4xl">
+    <div className="flex aspect-[6/5] flex-col gap-y-[0.5vw] rounded-lg md:rounded-xl">
+      <p className="mr-1 mt-[0.5px] flex justify-end text-[1.5vw] md:text-[1vw]">
         {date.getDate()}
       </p>
+
       {filteredEvents
-        ?.slice(0, displayEventCount)
-        .map(({ summary, start, end, location, description }, index) => {
-          return (
-            <CalendarEventPopover
-              startDate={start}
-              endDate={end}
-              title={summary}
-              date={date}
-              location={location}
-              description={description}
-              key={index}
-            />
-          );
-        })}
+        .slice(0, displayEventCount)
+        .map(({ summary, start, location }, index) => (
+          <CalendarEventPopover
+            key={index}
+            startDate={start}
+            title={summary}
+            date={date}
+            location={location || "TBD"}
+          />
+        ))}
+
       {filteredEvents.length > visibleEventCount && (
         <Popover>
-          <PopoverTrigger className="w-full cursor-pointer text-center text-[8px] hover:opacity-75 sm:text-xs 2xl:text-lg">
-            <p className="">{filteredEvents.length - displayEventCount} more</p>
+          <PopoverTrigger className="w-full cursor-pointer hover:opacity-75">
+            <p className="bg-cvdsa-red-100 text-[0.8vw] font-semibold">
+              {filteredEvents.length - displayEventCount} Other Events
+            </p>
           </PopoverTrigger>
           <PopoverContent>
             {filteredEvents
-              ?.slice(displayEventCount)
-              .map(({ summary, start, end, location, description }, idx) => {
-                return (
-                  <div className="px-[10%] pt-[1vh]">
-                    <CalendarEventPopover
-                      startDate={start}
-                      endDate={end}
-                      title={summary}
-                      date={date}
-                      location={location}
-                      description={description}
-                      key={idx}
-                    />
-                  </div>
-                );
-              })}
+              .slice(displayEventCount)
+              .map(({ summary, start, location }, idx) => (
+                <div className="px-[10%] pt-[1vh]" key={idx}>
+                  <CalendarEventPopover
+                    startDate={start}
+                    title={summary}
+                    date={date}
+                    location={location || "TBD"}
+                  />
+                </div>
+              ))}
           </PopoverContent>
         </Popover>
       )}

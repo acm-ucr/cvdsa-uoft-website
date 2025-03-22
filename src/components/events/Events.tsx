@@ -1,4 +1,5 @@
 "use client";
+import { EventCardProps } from "./CalendarCall";
 import EventCard from "./EventCard";
 import Image from "next/image";
 import classroom from "@/public/events/classroom.webp";
@@ -13,33 +14,34 @@ const Down = {
   }),
 };
 
-const UpcomingEvents = () => {
+interface UpcomingEventsProps {
+  events: EventCardProps[];
+}
+
+const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
   return (
     <div className="flex flex-col items-center">
-      <Image src={classroom} className="w-screen" alt={"Research Conference"} />
+      <Image src={classroom} className="w-screen" alt="Research Conference" />
       <motion.p
         variants={Down}
         viewport={{ once: true }}
         initial="initial"
-        whileInView={"animate"}
+        whileInView="animate"
         custom={0}
         className="m-4 flex justify-center font-seasons text-[4vw]"
       >
         UPCOMING EVENTS
       </motion.p>
-      <div className="flex w-10/12 gap-4">
-        <EventCard
-          date="20"
-          month="OCT"
-          title="NAME"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <EventCard
-          date="21"
-          month="OCT"
-          title="NAME"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+      <div className="flex w-10/12 flex-wrap justify-center gap-4">
+        {events.map((event, index) => (
+          <EventCard
+            key={index}
+            date={event.date}
+            month={event.month}
+            title={event.title}
+            description={event.description}
+          />
+        ))}
       </div>
     </div>
   );
