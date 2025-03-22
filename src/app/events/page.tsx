@@ -1,11 +1,11 @@
-import UpcomingEvents from "@/components/events/Events";
+import CalendarCall from "@/components/events/CalendarCall";
 
-const Events = () => {
+const Page = () => {
   return (
     <div>
-      <UpcomingEvents />
+      <CalendarCall />
     </div>
   );
 };
 
-export default Events;
+export default Page;

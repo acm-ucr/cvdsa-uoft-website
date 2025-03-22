@@ -5,19 +5,19 @@ import { useState } from "react";
 import logo from "@/public/logo.webp";
 import { items } from "@/data/navigation";
 import { AlignJustify } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
-  const [selected, setSelected] = useState("");
+  const pathname = usePathname();
   const [nav, setNav] = useState(false);
+
   const handleNav = () => {
     setNav(!nav);
   };
+
   return (
     <div className="sticky top-0 z-30 flex items-center border-b-4 border-cvdsa-red-200 bg-white text-lg md:text-2xl">
       <Link
-        onClick={() => {
-          setSelected("");
-        }}
         href="/"
         className="flex items-center duration-300 hover:opacity-75"
       >
@@ -35,11 +35,8 @@ const Navigation = () => {
           <Link
             href={link}
             key={index}
-            onClick={() => {
-              setSelected(name);
-            }}
             className={`border-solid duration-300 hover:opacity-40 ${
-              selected === name
+              pathname === link
                 ? "inline-block rounded-full border-b-2 bg-cvdsa-red-100 p-4 text-black"
                 : "text-black"
             }`}
@@ -60,12 +57,9 @@ const Navigation = () => {
           <Link
             href={link}
             key={index}
-            onClick={() => {
-              setSelected(name);
-              handleNav();
-            }}
+            onClick={handleNav}
             className={`border-solid py-2 duration-300 hover:opacity-60 md:py-0 ${
-              selected === name
+              pathname === link
                 ? "inline-block rounded-full border-b-2 bg-cvdsa-red-100 p-4 text-black"
                 : "text-black"
             }`}
