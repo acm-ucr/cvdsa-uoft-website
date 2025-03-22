@@ -18,15 +18,15 @@ const CalendarDay = ({ date, events }: DayProps) => {
     let eventStartDate: Date | null = null;
     let eventEndDate: Date | null = null;
 
-    if (event.start.dateTime) {
+    if (event.start?.dateTime) {
       eventStartDate = new Date(event.start.dateTime);
-    } else if (event.start.date) {
+    } else if (event.start?.date) {
       eventStartDate = new Date(event.start.date);
     }
 
-    if (event.end.dateTime) {
+    if (event.end?.dateTime) {
       eventEndDate = new Date(event.end.dateTime);
-    } else if (event.end.date) {
+    } else if (event.end?.date) {
       eventEndDate = new Date(event.end.date);
     }
 
@@ -59,7 +59,6 @@ const CalendarDay = ({ date, events }: DayProps) => {
     };
 
     updateVisibleEventCount();
-
     window.addEventListener("resize", updateVisibleEventCount);
     return () => window.removeEventListener("resize", updateVisibleEventCount);
   }, []);
@@ -69,21 +68,19 @@ const CalendarDay = ({ date, events }: DayProps) => {
       <p className="mr-1 mt-[0.5px] flex justify-end text-[1.5vw] md:text-[1vw]">
         {date.getDate()}
       </p>
+
       {filteredEvents
-        ?.slice(0, displayEventCount)
-        .map(({ summary, start, end, location, description }, index) => {
-          return (
-            <CalendarEventPopover
-              startDate={start}
-              endDate={end}
-              title={summary}
-              date={date}
-              location={location}
-              description={description}
-              key={index}
-            />
-          );
-        })}
+        .slice(0, displayEventCount)
+        .map(({ summary, start, location }, index) => (
+          <CalendarEventPopover
+            key={index}
+            startDate={start}
+            title={summary}
+            date={date}
+            location={location || "TBD"}
+          />
+        ))}
+
       {filteredEvents.length > visibleEventCount && (
         <Popover>
           <PopoverTrigger className="w-full cursor-pointer hover:opacity-75">
@@ -93,22 +90,17 @@ const CalendarDay = ({ date, events }: DayProps) => {
           </PopoverTrigger>
           <PopoverContent>
             {filteredEvents
-              ?.slice(displayEventCount)
-              .map(({ summary, start, end, location, description }, idx) => {
-                return (
-                  <div className="px-[10%] pt-[1vh]">
-                    <CalendarEventPopover
-                      startDate={start}
-                      endDate={end}
-                      title={summary}
-                      date={date}
-                      location={location}
-                      description={description}
-                      key={idx}
-                    />
-                  </div>
-                );
-              })}
+              .slice(displayEventCount)
+              .map(({ summary, start, location }, idx) => (
+                <div className="px-[10%] pt-[1vh]" key={idx}>
+                  <CalendarEventPopover
+                    startDate={start}
+                    title={summary}
+                    date={date}
+                    location={location || "TBD"}
+                  />
+                </div>
+              ))}
           </PopoverContent>
         </Popover>
       )}

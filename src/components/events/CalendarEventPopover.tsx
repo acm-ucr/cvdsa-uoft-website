@@ -6,17 +6,12 @@ import {
 
 interface CalendarEventPopoverProps {
   startDate: {
-    dateTime: Date;
-    date: string;
-  };
-  endDate: {
-    dateTime: Date;
-    date: string;
+    dateTime?: string;
+    date?: string;
   };
   title: string;
   date: Date;
   location: string;
-  description: string;
 }
 
 const CalendarEventPopover = ({
@@ -31,7 +26,7 @@ const CalendarEventPopover = ({
   if (startDate.dateTime) {
     eventStartDate = new Date(startDate.dateTime);
     hasStartTime = true;
-  } else {
+  } else if (startDate.date) {
     eventStartDate = new Date(startDate.date);
   }
 
@@ -41,6 +36,7 @@ const CalendarEventPopover = ({
   const formattedStartMinutes =
     startMinutes < 10 ? `0${startMinutes}` : startMinutes;
   const startHourSuffix = startHour < 12 ? "AM" : "PM";
+
   return (
     <Popover>
       <PopoverTrigger className="flex w-full cursor-pointer justify-between bg-cvdsa-cornflower-100 text-left hover:opacity-75">
