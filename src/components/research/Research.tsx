@@ -2,8 +2,8 @@
 import Image from "next/image";
 import ResearchConference from "@/public/research/ResearchConference.webp";
 import ResearchCard from "./ResearchCard";
-import articles from "@/public/research/articles.png";
-import podcasts from "@/public/research/podcasts.png";
+import articles from "@/public/research/articles.webp";
+import podcasts from "@/public/research/podcasts.webp";
 import * as motion from "motion/react-client";
 
 const Down = {
