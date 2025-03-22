@@ -48,7 +48,7 @@ function Calendar({
   };
 
   return (
-    <div className="pt-[5vh] md:pt-[10vh]">
+    <div className="flex justify-center py-[5vh] md:py-[10vh]">
       <CalendarTop currentDate={currentDate} />
       <DayPicker
         showOutsideDays={showOutsideDays}
@@ -69,11 +69,11 @@ function Calendar({
           caption_label: "font-bold text-[2.5vw]",
           nav: "space-x-[0.5vw] flex items-center",
           nav_button: cn("h-[2vw] w-[2vw] bg-transparent p-0"),
-          nav_button_previous: "absolute right-[19vw] top-[-5vh] z-50",
-          nav_button_next: "absolute right-[-3vw] top-[-5vh] z-50",
+          nav_button_previous: "absolute right-[19vw]",
+          nav_button_next: "absolute right-[-3vw]",
           table: "w-full border-collapse space-y-1",
           head_row:
-            "flex bg-cvdsa-orange-100 font-seasons mb-0 w-full aspect-[15/1] rounded-t-3xl text-center items-center",
+            "flex bg-cvdsa-orange-100 font-seasons mt-[2vw] w-full rounded-t-3xl text-center items-center justify-center gap-x-[0.9vw]",
           head_cell: "rounded-md w-[9.7vw] text-[2.3vw] font-light text-white",
           row: "grid grid-cols-7",
           cell: "border p-0 bg-white",
@@ -89,12 +89,12 @@ function Calendar({
         components={{
           IconLeft: () => (
             <div onClick={prevMonth}>
-              <FaArrowLeftLong className="text-3xl" />
+              <FaArrowLeftLong className="text-[3vw]" />
             </div>
           ),
           IconRight: () => (
             <div onClick={nextMonth}>
-              <FaArrowRightLong className="text-3xl" />
+              <FaArrowRightLong className="text-[3vw]" />
             </div>
           ),
           Day: ({ displayMonth, date }) => (

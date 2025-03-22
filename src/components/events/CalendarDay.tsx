@@ -13,17 +13,7 @@ interface DayProps {
   events: GoogleEventProps[];
 }
 
-const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
-  const today = new Date();
-  const iscurrentMonth = displayMonth.getMonth() === date.getMonth();
-  const isWeekend = date.getDay() === 0 || date.getDay() === 6;
-  const isToday =
-    date.getDate() === today.getDate() &&
-    date.getMonth() === today.getMonth() &&
-    date.getFullYear() === today.getFullYear();
-  const isOtherMonthsFirst =
-    displayMonth.getMonth() !== today.getMonth() && date.getDate() === 1;
-
+const CalendarDay = ({ date, events }: DayProps) => {
   const filteredEvents = events.filter((event) => {
     let eventStartDate: Date | null = null;
     let eventEndDate: Date | null = null;
@@ -75,10 +65,8 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
   }, []);
 
   return (
-    <div
-      className={`flex h-[10vh] flex-col items-center justify-start gap-y-0.5 sm:gap-y-1 md:h-[14vh] ${iscurrentMonth ? "" : "collapse"} ${isWeekend ? "text-csa-red-200" : "text-csa-gray-200"} ${isToday || isOtherMonthsFirst ? "bg-csa-red-200 text-csa-yellow-400" : ""} rounded-lg md:rounded-xl`}
-    >
-      <p className="mt-[1vh] text-base sm:text-lg md:text-2xl 2xl:text-4xl">
+    <div className="flex aspect-[6/5] flex-col gap-y-[0.5vw] rounded-lg md:rounded-xl">
+      <p className="mr-1 mt-[0.5px] flex justify-end text-[1.5vw] md:text-[1vw]">
         {date.getDate()}
       </p>
       {filteredEvents
@@ -98,8 +86,10 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
         })}
       {filteredEvents.length > visibleEventCount && (
         <Popover>
-          <PopoverTrigger className="w-full cursor-pointer text-center text-[8px] hover:opacity-75 sm:text-xs 2xl:text-lg">
-            <p className="">{filteredEvents.length - displayEventCount} more</p>
+          <PopoverTrigger className="w-full cursor-pointer hover:opacity-75">
+            <p className="bg-cvdsa-red-100 text-[0.8vw] font-semibold">
+              {filteredEvents.length - displayEventCount} Other Events
+            </p>
           </PopoverTrigger>
           <PopoverContent>
             {filteredEvents

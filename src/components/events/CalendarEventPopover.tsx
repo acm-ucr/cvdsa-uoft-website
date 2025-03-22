@@ -21,16 +21,12 @@ interface CalendarEventPopoverProps {
 
 const CalendarEventPopover = ({
   startDate,
-  endDate,
   title,
   date,
   location,
-  description,
 }: CalendarEventPopoverProps) => {
   let eventStartDate = new Date();
-  let eventEndDate = new Date();
   let hasStartTime = false;
-  let hasEndTime = false;
 
   if (startDate.dateTime) {
     eventStartDate = new Date(startDate.dateTime);
@@ -39,59 +35,42 @@ const CalendarEventPopover = ({
     eventStartDate = new Date(startDate.date);
   }
 
-  if (endDate.dateTime) {
-    eventEndDate = new Date(endDate.dateTime);
-    hasEndTime = true;
-  } else {
-    eventEndDate = new Date(endDate.date);
-  }
-
   const startHour = eventStartDate.getHours();
-  const endHour = eventEndDate.getHours();
   const startMinutes = eventStartDate.getMinutes();
-  const endMinutes = eventStartDate.getMinutes();
   const formattedStartHour = startHour % 12 || 12;
-  const formattedEndHour = endHour % 12 || 12;
   const formattedStartMinutes =
     startMinutes < 10 ? `0${startMinutes}` : startMinutes;
-  const formattedEndMinutes = endMinutes < 10 ? `0${endMinutes}` : endMinutes;
   const startHourSuffix = startHour < 12 ? "AM" : "PM";
-  const endHourSuffix = endHour < 12 ? "AM" : "PM";
   return (
     <Popover>
-      <PopoverTrigger className="w-full cursor-pointer text-center text-[8px] hover:opacity-75 sm:text-xs 2xl:text-lg">
-        <p className="overflow-hidden text-ellipsis whitespace-nowrap px-1">
+      <PopoverTrigger className="flex w-full cursor-pointer justify-between bg-cvdsa-cornflower-100 text-left hover:opacity-75">
+        <span className="overflow-hidden text-ellipsis whitespace-nowrap px-1 text-[0.8vw]">
           {title}
-        </p>
+        </span>
+        <span className="text-right text-[0.8vw]">
+          {formattedStartHour}:{formattedStartMinutes}
+        </span>
       </PopoverTrigger>
-      <PopoverContent className="w-[30vw] 2xl:w-[20vw]">
-        <p className="px-[1vw] py-[1vh] text-[10px] sm:text-xs md:text-lg 2xl:text-xl">
-          {date.toLocaleString("default", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}{" "}
-          - {title}
-        </p>
-        {(location || hasStartTime || description) && (
-          <div className="flex flex-col gap-y-[1vh] py-[1vh] pl-[2vw] text-[10px] sm:text-xs md:text-lg 2xl:text-xl">
-            <p>{location}</p>
-            <p>
-              {hasStartTime && (
-                <>
-                  {formattedStartHour}:{formattedStartMinutes} {startHourSuffix}
-                  {hasEndTime && (
-                    <>
-                      {" "}
-                      - {formattedEndHour}:{formattedEndMinutes} {endHourSuffix}
-                    </>
-                  )}
-                </>
-              )}
+      <PopoverContent className="w-[30vw] overflow-hidden rounded-xl p-0 shadow-md 2xl:w-[20vw]">
+        <div className="flex items-center justify-between border-b-2 border-cvdsa-red-200 bg-cvdsa-cornflower-100 px-4 py-2 text-[0.8vw] font-semibold">
+          <span>{title}</span>
+          <span>
+            {date.toLocaleString("default", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
+          </span>
+        </div>
+
+        <div className="bg-white px-4 py-3 text-[0.8vw]">
+          <p>{location}</p>
+          {hasStartTime && (
+            <p className="mt-1">
+              {formattedStartHour}:{formattedStartMinutes} {startHourSuffix}
             </p>
-            <p>{description}</p>
-          </div>
-        )}
+          )}
+        </div>
       </PopoverContent>
     </Popover>
   );
