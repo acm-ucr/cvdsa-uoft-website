@@ -13,8 +13,8 @@ const ResearchCard: React.FC<ResearchCardProps> = ({ name, photo, link }) => {
       className="relative flex justify-center hover:scale-105"
       target="_blank"
     >
-      <Image src={photo} alt="research photo" className="w-9/12" />
-      <div className="absolute bottom-0 h-[10vh] w-9/12 rounded-b-[2rem] bg-cvdsa-blue-100/90 pl-4 pt-4 text-left text-4xl font-medium">
+      <Image src={photo} alt="research photo" className="size-full" />
+      <div className="absolute bottom-0 size-full h-[8vh] rounded-b-[1.6rem] bg-cvdsa-blue-100/90 pl-4 pt-4 text-left text-2xl font-medium md:h-[10vh] md:rounded-b-[2rem] md:text-4xl">
         {name}
       </div>
     </Link>

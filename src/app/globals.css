@@ -4,14 +4,16 @@
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/fonts/TheSeasons-Regular.otf") format("opentype");
+  src: url("../../public/fonts/Fontspring-DEMO-theseasons-reg.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "The Seasons";
-  src: url("/fonts/TheSeasons-Bold.otf") format("opentype");
+  src: url("../../public/fonts/Fontspring-DEMO-theseasons-bd.otf")
+    format("opentype");
   font-weight: bold;
   font-style: normal;
 }

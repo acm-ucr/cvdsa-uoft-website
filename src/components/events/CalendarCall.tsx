@@ -31,24 +31,34 @@ const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   const { data, isLoading } = useQuery<{
-    rawEvents: GoogleEventProps[];
-    cardEvents: EventCardProps[];
+    allEvents: GoogleEventProps[];
+    futureEvents: EventCardProps[];
   }>({
-    queryKey: ["repoData"],
+    queryKey: ["googleCalendarEvents"],
     queryFn: async () => {
+      const now = new Date();
+      const tenWeeksAgo = new Date(
+        now.getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
+      ).toISOString();
+      const tenWeeksAhead = new Date(
+        now.getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
+      ).toISOString();
+
+      // Fetch all events
       const response = await fetch(
         `https://www.googleapis.com/calendar/v3/calendars/${
           process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_EMAIL
-        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${new Date(
-          new Date().getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
-        ).toISOString()}&timeMax=${new Date(
-          new Date().getTime() + 60 * 60 * 24 * 7 * 10 * 1000,
-        ).toISOString()}`,
+        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime&timeMin=${tenWeeksAgo}&timeMax=${tenWeeksAhead}`,
       ).then((res) => res.json());
 
-      const rawEvents = response.items || [];
+      const allEvents = response.items || [];
 
-      const cardEvents = rawEvents
+      const futureEvents = allEvents
+        .filter((item: GoogleEventProps) => {
+          const startString = item.start?.dateTime || item.start?.date;
+          if (!startString) return false;
+          return new Date(startString) >= now;
+        })
         .map((item: GoogleEventProps) => {
           const startString = item.start?.dateTime || item.start?.date;
           if (!startString) return null;
@@ -69,23 +79,23 @@ const CalendarCall = () => {
         .filter(Boolean)
         .slice(0, 2) as EventCardProps[];
 
-      return { rawEvents, cardEvents };
+      return { allEvents, futureEvents };
     },
   });
 
   return (
-    <>
-      {!isLoading && data && <UpcomingEvents events={data.cardEvents} />}
+    <div className="min-h-screen">
+      {!isLoading && data && <UpcomingEvents events={data.futureEvents} />}
       {!isLoading && data && (
         <Calendar
           mode="single"
           selected={date}
           onSelect={setDate}
           className="mx-[5%] w-9/12 lg:mx-[15%]"
-          events={data.rawEvents}
+          events={data.allEvents}
         />
       )}
-    </>
+    </div>
   );
 };
 
