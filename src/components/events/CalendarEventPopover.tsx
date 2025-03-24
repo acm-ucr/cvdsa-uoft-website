@@ -47,16 +47,16 @@ const CalendarEventPopover = ({
           {formattedStartHour}:{formattedStartMinutes}
         </span>
       </PopoverTrigger>
-      <PopoverContent className="w-[30vw] overflow-hidden rounded-xl p-0 shadow-md 2xl:w-[20vw]">
-        <div className="flex items-center justify-between border-b-2 border-cvdsa-red-200 bg-cvdsa-cornflower-100 px-4 py-2 text-[0.8vw] font-semibold">
-          <span>{title}</span>
-          <span>
+      <PopoverContent className="w-[30vw] overflow-hidden rounded-xl p-0 shadow-md 2xl:w-[25vw]">
+        <div className="grid grid-cols-4 border-b-2 border-cvdsa-red-200 bg-cvdsa-cornflower-100 px-4 py-2 text-[0.8vw] font-semibold">
+          <p className="col-span-3">{title}</p>
+          <p className="flex justify-end">
             {date.toLocaleString("default", {
               month: "short",
               day: "numeric",
               year: "numeric",
             })}
-          </span>
+          </p>
         </div>
 
         <div className="bg-white px-4 py-3 text-[0.8vw]">

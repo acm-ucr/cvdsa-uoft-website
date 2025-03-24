@@ -1,11 +1,7 @@
 import CalendarCall from "@/components/events/CalendarCall";
 
 const Page = () => {
-  return (
-    <div>
-      <CalendarCall />
-    </div>
-  );
+  return <CalendarCall />;
 };
 
 export default Page;

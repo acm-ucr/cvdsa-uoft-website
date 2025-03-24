@@ -17,7 +17,7 @@ const Landing = () => {
   return (
     <div className="relative z-[-1]">
       <Image src={landing} alt="landing" className="w-screen" />
-      <div className="absolute left-[5vw] top-[7vh] text-center md:left-[15vw] md:top-[30vh] 2xl:left-[25vw]">
+      <div className="absolute left-[8vw] top-[7vh] text-center md:left-[20vw] md:top-[30vh] 2xl:left-[28vw]">
         <motion.p
           variants={Down}
           viewport={{ once: true, amount: 0 }}
