@@ -17,7 +17,7 @@ const Down = {
 
 const Contacts = () => {
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <Image src={socialsimage} alt="Socials Banner" className="w-fit" />
       <motion.p
         variants={Down}
