@@ -1,9 +1,9 @@
 "use client";
-import AwarenessCommittee from "./committees/AwarenessCommittee";
-import DevelopmentCommittee from "./committees/DevelopmentCommittee";
-import EventsCommittee from "./committees/EventsCommittee";
-import FinanceCommittee from "./committees/FinanceCommittee";
-import ResearchCommittee from "./committees/ResearchCommittee";
+import Awareness from "./committees/Awareness";
+import Development from "./committees/Development";
+import Events from "./committees/Events";
+import Finance from "./committees/Finance";
+import Research from "./committees/Research";
 import * as motion from "motion/react-client";
 
 const Down = {
@@ -37,16 +37,14 @@ const Committees = () => {
         custom={0.5}
         className="grid grid-cols-1 justify-center text-center md:grid-cols-3"
       >
+        <Research />
         <div>
-          <ResearchCommittee />
+          <Awareness />
+          <Finance />
         </div>
         <div>
-          <AwarenessCommittee />
-          <FinanceCommittee />
-        </div>
-        <div>
-          <DevelopmentCommittee />
-          <EventsCommittee />
+          <Development />
+          <Events />
         </div>
       </motion.div>
     </div>

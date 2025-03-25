@@ -19,11 +19,9 @@ const CalendarTop = ({ currentDate }: CalendarTopProps) => {
   ];
 
   return (
-    <>
-      <div className="absolute right-[8.9vw] w-[20vw] translate-y-[-1.5vw] text-[3vw] font-semibold">
-        {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
-      </div>
-    </>
+    <div className="absolute right-[9vw] w-[20vw] translate-y-[-1.5vw] text-[3vw] font-semibold">
+      {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
+    </div>
   );
 };
 

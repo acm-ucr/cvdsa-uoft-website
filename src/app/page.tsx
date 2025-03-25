@@ -4,11 +4,11 @@ import AboutUsBlurb from "@/components/home/AboutUsBlurb";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Landing />
       <AboutUsBlurb />
       <BlurbHome />
-    </div>
+    </>
   );
 };
 

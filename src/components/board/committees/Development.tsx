@@ -1,13 +1,13 @@
 import { MdOutlineEmail } from "react-icons/md";
-import awarenesscommittee from "@/data/board/awarenesscommittee";
+import developmentcommittee from "@/data/board/developmentcommittee";
 import Link from "next/link";
-const AwarenessCommittee = () => {
+const Development = () => {
   return (
-    <div className="mb-6 pl-[6vw]">
-      <div className="mb-4 flex items-center font-seasons text-3xl">
-        <p>Awareness and Marketing</p>
-      </div>
-      {awarenesscommittee.map(({ name, email }, index) => (
+    <div className="pl-[6vw]">
+      <p className="mb-4 flex items-center font-seasons text-3xl">
+        Development
+      </p>
+      {developmentcommittee.map(({ name, email }, index) => (
         <div key={index} className="mb-3 flex items-center gap-2 text-xl">
           <Link href={email} className="text-red-500">
             <MdOutlineEmail />
@@ -19,4 +19,4 @@ const AwarenessCommittee = () => {
   );
 };
 
-export default AwarenessCommittee;
+export default Development;

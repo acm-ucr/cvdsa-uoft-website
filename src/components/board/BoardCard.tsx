@@ -22,13 +22,13 @@ const BoardCard: React.FC<BoardCardTypes> = ({
   return (
     <div className="flex flex-col">
       <p className="mb-2 text-center text-xl font-medium">{position}</p>
-      <div>
-        <Image
-          src={image}
-          alt="BoardPhoto"
-          className="rounded-xl border-2 border-cvdsa-blue-200"
-        />
-      </div>
+
+      <Image
+        src={image}
+        alt="BoardPhoto"
+        className="rounded-xl border-2 border-cvdsa-blue-200"
+      />
+
       <div className="p-2 text-left text-xl">
         <div className="grid grid-cols-5 items-center">
           <p className="col-span-4 text-left text-lg font-semibold leading-tight">
