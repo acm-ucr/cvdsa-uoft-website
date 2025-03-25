@@ -31,7 +31,7 @@ const BlurbHome = () => {
         initial="initial"
         whileInView={"animate"}
         custom={0.9}
-        className="mx-[6vw] mt-[11vh] grid grid-cols-1 md:grid-cols-3"
+        className="mx-[6vw] mb-8 mt-[11vh] grid grid-cols-1 md:grid-cols-3"
       >
         {blurbData.map(({ title, description, image, alt }, index) => (
           <BlurbHomeProps

@@ -69,8 +69,8 @@ function Calendar({
           caption_label: "font-bold text-[2.5vw]",
           nav: "space-x-[0.5vw] flex items-center",
           nav_button: cn("h-[2vw] w-[2vw] bg-transparent p-0"),
-          nav_button_previous: "absolute right-[19vw]",
-          nav_button_next: "absolute right-[-3vw]",
+          nav_button_previous: "absolute right-[20vw]",
+          nav_button_next: "absolute right-[-4vw]",
           table: "w-full border-collapse space-y-1",
           head_row:
             "flex bg-cvdsa-orange-100 font-seasons mt-[2vw] w-full rounded-t-3xl text-center items-center justify-center gap-x-[0.9vw]",

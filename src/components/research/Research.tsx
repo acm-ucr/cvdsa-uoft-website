@@ -59,7 +59,7 @@ const Research = () => {
         initial="initial"
         whileInView={"animate"}
         custom={0.8}
-        className="mx-[20%] grid grid-cols-1 gap-[8vw] pb-[10vh] pt-4 md:grid-cols-2 md:gap-[2vw]"
+        className="mx-[20%] grid grid-cols-1 gap-[8vw] pb-[10vh] pt-4 md:grid-cols-2 md:gap-[4vw]"
       >
         <ResearchCard
           name="Articles"

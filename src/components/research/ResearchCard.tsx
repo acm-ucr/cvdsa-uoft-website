@@ -10,7 +10,7 @@ const ResearchCard: React.FC<ResearchCardProps> = ({ name, photo, link }) => {
   return (
     <Link
       href={link}
-      className="relative flex justify-center hover:scale-105"
+      className="relative flex justify-center hover:-translate-y-2 hover:cursor-pointer"
       target="_blank"
     >
       <Image src={photo} alt="research photo" className="size-full" />
