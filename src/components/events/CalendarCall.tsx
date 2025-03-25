@@ -2,7 +2,7 @@
 import React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
-import UpcomingEvents from "./Events";
+import UpcomingEvents from "./UpcomingEvents";
 
 // Original Google Calendar event structure
 export type GoogleEventProps = {

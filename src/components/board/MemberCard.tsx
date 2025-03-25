@@ -1,9 +1,5 @@
 const MemberCard = ({ name }: { name: string }) => {
-  return (
-    <div>
-      <p className="text-sm">{name}</p>
-    </div>
-  );
+  return <p className="text-sm">{name}</p>;
 };
 
 export default MemberCard;

@@ -15,7 +15,7 @@ const Down = {
 
 const Landing = () => {
   return (
-    <div className="relative z-[-1]">
+    <div className="z-5 relative">
       <Image src={landing} alt="landing" className="w-screen" />
       <div className="absolute left-[8vw] top-[7vh] text-center md:left-[20vw] md:top-[30vh] 2xl:left-[28vw]">
         <motion.p
@@ -48,7 +48,7 @@ const Landing = () => {
           <Link
             href="https://docs.google.com/forms/d/e/1FAIpQLScp2vI1qp2TY2f7dkbMfajwCw87RrSyBeHAgDQGOa-4E7NfgQ/viewform"
             target="_blank"
-            className="rounded-full bg-white px-4 py-2 text-sm shadow-md shadow-black/20 hover:scale-105 md:text-3xl"
+            className="rounded-full bg-white px-8 py-4 text-sm shadow-md shadow-black/20 hover:scale-105 md:text-3xl"
           >
             JOIN NOW!
           </Link>

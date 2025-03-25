@@ -1,6 +1,6 @@
 "use client";
 import { EventCardProps } from "./CalendarCall";
-import EventCard from "./EventCard";
+import Card from "./Card";
 import Image from "next/image";
 import classroom from "@/public/events/classroom.webp";
 import * as motion from "motion/react-client";
@@ -46,7 +46,7 @@ const UpcomingEvents = ({ events }: UpcomingEventsProps) => {
       ) : (
         <div className="grid w-10/12 grid-cols-1 flex-wrap justify-center gap-4 md:grid-cols-2">
           {events.map((event, index) => (
-            <EventCard
+            <Card
               key={index}
               date={event.date}
               month={event.month}

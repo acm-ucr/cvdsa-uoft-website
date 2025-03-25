@@ -1,13 +1,13 @@
 import BoardCards from "@/components/board/BoardCards";
 import Committees from "@/components/board/Committees";
 
-const Board = () => {
+const Page = () => {
   return (
-    <div>
+    <>
       <BoardCards />
       <Committees />
-    </div>
+    </>
   );
 };
 
-export default Board;
+export default Page;
