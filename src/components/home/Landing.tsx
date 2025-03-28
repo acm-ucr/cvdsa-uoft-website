@@ -15,14 +15,21 @@ const Down = {
 
 const Landing = () => {
   return (
-    <div className="z-5 relative">
-      <Image src={landing} alt="landing" className="w-screen" />
-      <div className="absolute left-[8vw] top-[7vh] text-center md:left-[20vw] md:top-[30vh] 2xl:left-[28vw]">
+    <div className="relative">
+      {/* Background Image */}
+      <Image
+        src={landing}
+        alt="landing"
+        className="absolute left-0 top-0 z-0 h-screen w-screen object-cover"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex h-screen flex-col items-center justify-center">
         <motion.p
           variants={Down}
           viewport={{ once: true, amount: 0 }}
           initial="initial"
-          whileInView={"animate"}
+          whileInView="animate"
           className="font-seasons text-3xl font-semibold tracking-tight text-white md:text-7xl"
         >
           UNIVERSITY OF TORONTO
@@ -31,7 +38,7 @@ const Landing = () => {
           variants={Down}
           viewport={{ once: true, amount: 0 }}
           initial="initial"
-          whileInView={"animate"}
+          whileInView="animate"
           custom={0.4}
           className="mb-4 text-center text-[3.5vw] text-white md:mb-[4vh] md:text-3xl"
         >
@@ -42,7 +49,7 @@ const Landing = () => {
           variants={Down}
           viewport={{ once: true, amount: 0 }}
           initial="initial"
-          whileInView={"animate"}
+          whileInView="animate"
           custom={0.7}
         >
           <Link
