@@ -18,9 +18,9 @@ const AboutUsBlurb = () => {
       variants={Down}
       viewport={{ once: true, amount: 0 }}
       initial="initial"
-      whileInView={"animate"}
+      whileInView="animate"
       custom={0.1}
-      className="z-10 mx-[10%] mt-[-4vh] grid grid-cols-1 items-center justify-center rounded-3xl bg-white py-[2vh] shadow-xl md:mt-[-15vh] md:grid-cols-2 md:py-[4vh]"
+      className="relative z-20 mx-[10%] mt-[-4vh] grid grid-cols-1 items-center justify-center rounded-3xl bg-white py-[2vh] shadow-xl md:mt-[-15vh] md:grid-cols-2 md:py-[4vh]"
     >
       <Image src={aboutBlurb} alt="Group Club Photo" className="px-4 md:px-8" />
       <div className="flex flex-col px-8">
@@ -44,7 +44,7 @@ const AboutUsBlurb = () => {
           led advocacy group dedicated to raising awareness and funds in
           collaboration with charities like the Heart and Stroke Foundation of
           Canada. Our organization operates through five distinct committees:
-          Events and Education, Research, Finance, Marketing, and Develpment.
+          Events and Education, Research, Finance, Marketing, and Development.
           Together, we aim to increase awareness of cardiovascular diseases,
           inspire student engagement in research, and support charitable
           fundraising efforts.
